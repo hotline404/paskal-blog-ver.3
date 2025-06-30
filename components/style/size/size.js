@@ -11,6 +11,8 @@ export const size = {
     modal_titleBox: "",
     modal_aticleBox: "",
     escButton: "",
+
+    
   },
 
   height: {
