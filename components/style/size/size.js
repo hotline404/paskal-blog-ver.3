@@ -1,7 +1,7 @@
 export const size = {
   width: {
-    background: "",
-    page: "",
+    background: "100%",
+    page: "80%",
     button: "",
     input: "",
     tag: "",
@@ -10,12 +10,12 @@ export const size = {
     modal_page: "",
     modal_titleBox: "",
     modal_aticleBox: "",
-    escButton: ""
+    escButton: "",
   },
 
   height: {
-    background: "",
-    page: "",
+    background: "h-screen",
+    page: "80%",
     button: "",
     input: "",
     tag: "",
@@ -24,7 +24,7 @@ export const size = {
     modal_page: "",
     modal_titleBox: "",
     modal_aticleBox: "",
-    escButton : ""
+    escButton: "",
   },
 
   font: {
@@ -34,9 +34,8 @@ export const size = {
     postLists: "",
     modal_title: "",
     modal_date: "",
-    modal_aticle: ""
+    modal_aticle: "",
   },
 };
 
-
-// rounded-[] 는 mixed에서 인자에 따라 달라지게 할 것 [6, 10, 28], 
+// rounded-[] 는 mixed에서 인자에 따라 달라지게 할 것 [6, 10, 28],
