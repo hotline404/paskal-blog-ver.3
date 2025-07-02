@@ -1,5 +1,5 @@
 export const position = {
-  base_note: "",
+  base_note: "flex justify-center items-center",
   page: "",
   header: "",
   titleBox: "",

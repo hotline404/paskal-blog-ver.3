@@ -1,7 +1,7 @@
 export const size = {
   width: {
-    base_note: "100%",
-    page: "80%",
+    base_note: "w-[100%]",
+    page: "w-[80%]",
     button: "",
     input: "",
     tag: "",
@@ -17,7 +17,7 @@ export const size = {
 
   height: {
     base_note: "h-screen",
-    page: "80%",
+    page: "h-[80%]",
     button: "",
     input: "",
     tag: "",

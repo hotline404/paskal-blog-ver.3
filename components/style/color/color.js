@@ -1,12 +1,12 @@
 export const color = {
   background: {
     base_note: "bg-[#5AD060]",
-    modal_note: "#868686",
+    modal_note: "bg-[#868686]",
   },
 
   pageColor: {
-    base_note: "#FAF4E6",
-    modal_note: "#FFFFFF",
+    base_note: "bg-[#FAF4E6]",
+    modal_note: "bg-[#FFFFFF]",
   },
 
   outline: {
