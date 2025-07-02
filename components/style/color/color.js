@@ -1,6 +1,6 @@
 export const color = {
   background: {
-    base_note: "#5AD060",
+    base_note: "bg-[#5AD060]",
     modal_note: "#868686",
   },
 
