@@ -1,7 +1,7 @@
 export const size = {
   width: {
     base_note: "w-[100%]",
-    page: "w-[80%]",
+    page: "w-[85%]",
     button: "",
     input: "",
     tag: "",
@@ -12,12 +12,12 @@ export const size = {
     modal_aticleBox: "",
     escButton: "",
 
-    
+    header: "w-[100%]",
   },
 
   height: {
     base_note: "h-screen",
-    page: "h-[80%]",
+    page: "h-[72%]",
     button: "",
     input: "",
     tag: "",
@@ -27,6 +27,8 @@ export const size = {
     modal_titleBox: "",
     modal_aticleBox: "",
     escButton: "",
+
+    header: "h-[22%]",
   },
 
   font: {

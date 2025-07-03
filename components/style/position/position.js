@@ -1,7 +1,7 @@
 export const position = {
   base_note: "flex justify-center items-center",
-  page: "",
-  header: "",
+  page: "flex-col juntify-center items-center relative",
+  header: "flex-col justify-center items-center absolute top-0",
   titleBox: "",
   tagBox: "",
   tagButton: "",
