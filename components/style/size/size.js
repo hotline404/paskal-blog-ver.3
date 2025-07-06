@@ -28,7 +28,7 @@ export const size = {
     modal_aticleBox: "",
     escButton: "",
 
-    header: "h-[22%]",
+    header: "h-[12%]",
   },
 
   font: {
