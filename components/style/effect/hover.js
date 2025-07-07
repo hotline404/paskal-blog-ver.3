@@ -1,5 +1,5 @@
 export const hover = {
   size : {
-    header: "hover:h-[22%]",
+    header: "hover:h-[100px] ",
   },
 }
