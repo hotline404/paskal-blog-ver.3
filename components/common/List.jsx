@@ -6,7 +6,7 @@ function List(props) {
     <ol>
       {props.lists.map((list) => {
         return (
-          <li>
+          <li key={list.post_id}>
             <h1>{list.title}</h1>
             <p>{list.date}</p>
           </li>

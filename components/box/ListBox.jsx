@@ -1,6 +1,10 @@
 import React from 'react'
 import List from '../common/List'
 
+//비즈니스 컴포넌트로 씀
+//zustand에서 lists를 불러올 것
+//필터링이 검색에서 바로바로 연동이 될 것 => 최적화 필요
+
 const lists = [
   {
     title: "개지리는 포스트 1",
