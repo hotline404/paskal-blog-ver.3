@@ -40,10 +40,10 @@ const lists = [
 
 function ListBox() {
   return (
-    <div>
+    <div className="w-[100%] h-[100%] flex justify-center items-center mt-[70px] px-[20px]">
       <List lists={lists}/> 
     </div>
   )
-}
+} 
 
 export default ListBox
