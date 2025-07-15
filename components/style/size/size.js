@@ -3,7 +3,7 @@ export const size = {
     base_note: "w-[100%]",
     page: "w-[85%]",
     button: "",
-    searchBox: "w-[100%] [&_input]:w-[30%] [&_input]:mx-[12px] ",
+    searchBox: "w-[100%] [&_input]:w-[30%] [&_input]:mx-[12px] [&_input]:px-[10px]",
     tag: "",
     titleBox: "w-[100%]",
     modal_background: "",
