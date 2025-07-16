@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className={mixtureStyle.header}>
       <TitleBox>
-        PASKAL
+        Paskal
       </TitleBox>
         <SearchBox >
           <Input input={{

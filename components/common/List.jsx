@@ -7,7 +7,7 @@ function List(props) {
       {props.lists.map((list) => {
         return (
           <li
-            className="outline-[#31302B] outline-[5px] rounded-[10px] w-[calc(90%/3)] h-[80px] mx-[10px] my-[10px] p-[10px]"
+            className="outline-[#31302B] outline-[5px] rounded-[10px] w-[calc(90%/3)] h-[80px] mx-[10px] my-[10px] p-[10px] shadow-xl/50"
             key={list.post_id}
           >
             <h1 className="font-bold">{list.title}</h1>
