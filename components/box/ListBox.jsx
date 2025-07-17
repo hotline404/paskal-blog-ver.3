@@ -1,5 +1,6 @@
 import React from "react";
 import List from "../common/List";
+import { mixtureStyle } from "../style/mixture/mixture";
 
 //비즈니스 컴포넌트로 씀
 //zustand에서 lists를 불러올 것
@@ -76,12 +77,7 @@ const lists = [
 function ListBox() {
   return (
     <div
-      className="w-[100%] h-[100%] flex justify-center items-center mt-[70px] px-[20px] overflow-y-auto
-  [&::-webkit-scrollbar]:w-2
-  [&::-webkit-scrollbar-track]:none
-  [&::-webkit-scrollbar-thumb]:bg-[#31302B]
-  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
+      className={mixtureStyle.postListBox}
     >
       <List lists={lists} />
     </div>
