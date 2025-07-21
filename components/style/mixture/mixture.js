@@ -16,5 +16,5 @@ export const mixtureStyle = {
   titleBox: `${position.titleBox} ${size.width.titleBox} ${size.height.titleBox} ${size.font.title}`,
   searchBox: `${size.width.searchBox} ${size.height.searchBox} ${position.searchBox} ${outline.searchBox} `,
   postListBox: `${size.width.postListBox} ${size.height.postListBox} ${size.font.postListBox} ${position.postListBox} ${outline.postListBox} ${overFlow.scrolly} ${overFlow.webkit_track_hide}` ,
-  postList: `${size.width.postList} ${size.height.postList} ${position.postList} ${outline.postList} ${shadow.postList} ${size.font.postList}`,
+  postList: `${size.width.postList} ${size.height.postList} ${position.postList} ${outline.postList} ${shadow.postList} ${size.font.postList} ${hover.point.list}`,
 };
