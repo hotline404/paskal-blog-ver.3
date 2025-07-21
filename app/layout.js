@@ -16,13 +16,14 @@ export const metadata = {
   description: "파스칼의 블로그, paskal's blog",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, modal }) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {modal}
       </body>
     </html>
   );
