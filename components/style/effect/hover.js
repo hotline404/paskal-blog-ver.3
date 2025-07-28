@@ -1,6 +1,6 @@
 export const hover = {
   size : {
-    header: "hover:h-[100px] ",
+    header: "hover:h-[17%] ",
   },
 
   point: {
