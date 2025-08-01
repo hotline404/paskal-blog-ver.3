@@ -16,8 +16,8 @@ export const color = {
   },
 
   fontColor: {
-    base_note: "#31302B",
-    modal_note: "#3934D8",
+    base_note: "text-[#31302B]",
+    modal_note: "text-[#3934D8]",
   },
 
   shadowColor: {

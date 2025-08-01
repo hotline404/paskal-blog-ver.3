@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "paskal's blog",
+  title: "paskal - 파스칼",
   description: "파스칼의 블로그, paskal's blog",
 };
 
