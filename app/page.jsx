@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 export const metadata = { title: "홈", description: "루트 페이지" };
 
 
-export default function Home() {
+function Home() {
   console.log("tq tq tq tq")
   const homePageStyle = mixtureStyle;
   return (
@@ -20,3 +20,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home
