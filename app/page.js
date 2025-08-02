@@ -5,6 +5,8 @@ import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
 
 export const dynamic = "force-dynamic";
+export const metadata = { title: "홈", description: "루트 페이지" };
+
 
 export default function Home() {
   console.log("tq tq tq tq")
