@@ -17,7 +17,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children, modal }) {
-  console.log("디버깅 layout root")
+  console.log("디버깅 layout root") 
   return (
     <html lang="en">
       <body
