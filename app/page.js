@@ -7,6 +7,7 @@ import ListBox from "@/components/box/ListBox";
 export const dynamic = "force-dynamic";
 
 export default function Home() {
+  console.log("tq tq tq tq")
   const homePageStyle = mixtureStyle;
   return (
     <div className={homePageStyle.base_note}>
