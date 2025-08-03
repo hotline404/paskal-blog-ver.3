@@ -2,6 +2,8 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 
+export const dynamic = "force-dynamic";
+
 function Post() {
   const router = useRouter();
 
