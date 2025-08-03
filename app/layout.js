@@ -20,7 +20,7 @@ export const metadata = {
 export const dynamic = "force-dynamic";
 
 
-export default function RootLayout({ children, modal }) {
+export default function RootLayout({ children }) {
   console.log("디버깅 layout root");
   return (
     <html lang="en">
@@ -28,7 +28,6 @@ export default function RootLayout({ children, modal }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>{children}</div>
-        <div>{modal}</div>
       </body>
     </html>
   );
