@@ -16,6 +16,10 @@ export const metadata = {
   description: "파스칼의 블로그, paskal's blog",
 };
 
+// layout.js
+export const dynamic = "force-dynamic";
+
+
 export default function RootLayout({ children, modal }) {
   console.log("디버깅 layout root");
   return (
