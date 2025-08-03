@@ -28,7 +28,7 @@ export default function RootLayout({ children, modal }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>{children}</div>
-        <div>{modal}</div>
+        <div>{modal ? <div>{modal}</div> : <></>}</div>
       </body>
     </html>
   );
