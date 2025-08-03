@@ -14,7 +14,6 @@ function Home() {
   const homePageStyle = mixtureStyle;
   return (
     <div className={homePageStyle.base_note}>
-      asdfasdfasdfasdfasf
       <MainBox BoxAttribute={homePageStyle.page}>
         <Header />
         <ListBox />
