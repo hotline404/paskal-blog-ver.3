@@ -4,7 +4,7 @@ import MainBox from "@/components/box/MainBox";
 import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
-const getNotion = require("../API/test.js");
+const getNotion = require("../API/service.js");
 require("dotenv").config();
 
 export const dynamic = "force-dynamic";
