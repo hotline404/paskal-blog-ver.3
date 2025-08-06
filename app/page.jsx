@@ -4,12 +4,22 @@ import MainBox from "@/components/box/MainBox";
 import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
+const getNotion = require("../API/test.js");
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "홈", description: "루트 페이지" };
 
+async function run() {
+  try {
+    const res = await getNotion();
+    console.log("res", res);
+  } catch (error) {
+    console.log("get error", error);
+  }
+}
 
 function Home() {
+  run()
 
   const homePageStyle = mixtureStyle;
   return (
