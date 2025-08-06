@@ -14,16 +14,15 @@ module.exports = async function getNotion () {
     database_id: db_id,
   });
 
-  //  const post = results.map((page) => {
-  //   return {
-  //     id: page.id,
-  //     title: page.properties.Name.title[0].text.content,
-  //     allProperties: page.properties
-  //   };
-  // });
+   const post = results.map((page) => {
+    return {
+      id: page.id,
+      title: page.properties.Name.title[0].text.content,
+      allProperties: page.properties
+    };
+  });
 
 
-  // return post
+  return post
 
-  return results
 };
