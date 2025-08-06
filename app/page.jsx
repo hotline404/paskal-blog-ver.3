@@ -21,7 +21,7 @@ async function run() {
 
 function Home() {
   run()
-  console.log("env file check", process.env.NOTION_KEY);
+  
   const homePageStyle = mixtureStyle;
   return (
     <div className={homePageStyle.base_note}>

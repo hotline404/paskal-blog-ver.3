@@ -17,7 +17,6 @@ module.exports = async function getNotion () {
   //   return {
   //     id: page.id,
   //     title: page.properties.Name.title[0].text.content,
-  //     tags: page.properties.tags.multi_select,
   //     allProperties: page.properties
   //   };
   // });
