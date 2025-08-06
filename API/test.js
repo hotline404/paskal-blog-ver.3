@@ -3,7 +3,8 @@ const {notion_key, notion_DB} = require("./instance.js");
 const { Client } = require("@notionhq/client");
 
 const notion = new Client({
-  auth: notion_key
+  auth: notion_key,
+  request_timeout: 10000,
 });
 
 const db_id = notion_DB;

@@ -21,7 +21,6 @@ async function run() {
 
 function Home() {
   run()
-  
   const homePageStyle = mixtureStyle;
   return (
     <div className={homePageStyle.base_note}>
