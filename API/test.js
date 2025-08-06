@@ -13,15 +13,17 @@ module.exports = async function getNotion () {
     database_id: db_id,
   });
 
-   const post = results.map((page) => {
-    return {
-      id: page.id,
-      title: page.properties.Name.title[0].text.content,
-      tags: page.properties.tags.multi_select,
-      allProperties: page.properties
-    };
-  });
+  console.log("result", results)
+
+  //  const post = results.map((page) => {
+  //   return {
+  //     id: page.id,
+  //     title: page.properties.Name.title[0].text.content,
+  //     tags: page.properties.tags.multi_select,
+  //     allProperties: page.properties
+  //   };
+  // });
 
 
-  return post
+  // return post
 };
