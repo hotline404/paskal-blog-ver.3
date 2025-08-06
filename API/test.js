@@ -1,5 +1,4 @@
-import axios from "axios"
-const {notion_key, notion_DB} = require("./instance.js")
+const {notion_key, notion_DB} = require("./instance.js");
 
 const { Client } = require("@notionhq/client");
 
