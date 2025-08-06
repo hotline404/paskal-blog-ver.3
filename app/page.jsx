@@ -13,7 +13,9 @@ export const metadata = { title: "홈", description: "루트 페이지" };
 async function run() {
   try {
     const res = await getNotion();
-    console.log("res", res);
+    console.log("요청 성공");
+
+    return res;
   } catch (error) {
     console.log("get error", error);
   }

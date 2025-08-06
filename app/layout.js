@@ -21,7 +21,6 @@ export const dynamic = "force-dynamic";
 
 
 export default function RootLayout({ children, modal }) {
-  console.log("디버깅 layout root");
   return (
     <html lang="en">
       <body
