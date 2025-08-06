@@ -13,8 +13,6 @@ module.exports = async function getNotion () {
     database_id: db_id,
   });
 
-  console.log("result", results)
-
   //  const post = results.map((page) => {
   //   return {
   //     id: page.id,
@@ -26,4 +24,6 @@ module.exports = async function getNotion () {
 
 
   // return post
+
+  return results
 };
