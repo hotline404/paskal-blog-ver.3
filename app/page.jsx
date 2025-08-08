@@ -4,6 +4,7 @@ import MainBox from "@/components/box/MainBox";
 import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
+import useStore from "@/store/state.js";
 const getNotion = require("../API/service.js");
 require("dotenv").config();
 
@@ -11,8 +12,19 @@ export const dynamic = "force-dynamic";
 export const metadata = { title: "홈", description: "루트 페이지" };
 
 async function run() {
+  const { initialize } = useStore();
+
+  const addNewPost = (data) => {
+    initialize(data);
+
+    //데이터 정리해서 넣기
+  }
+
+
   try {
     const res = await getNotion();
+
+    addNewPost(res);
     console.log("요청 성공");
 
     return res;
