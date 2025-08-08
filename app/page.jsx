@@ -5,10 +5,6 @@ import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
 import useStore from "@/store/state.js";
-import { useSyncExternalStore } from 'react';
-
-console.log('useSyncExternalStore:', useSyncExternalStore);
-
 const getNotion = require("../API/service.js");
 require("dotenv").config();
 
