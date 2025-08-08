@@ -1,4 +1,6 @@
 // 루트 페이지 크기 및 페이지 색상
+"use client"
+
 import React from "react";
 import MainBox from "@/components/box/MainBox";
 import { mixtureStyle } from "@/components/style/mixture/mixture";
