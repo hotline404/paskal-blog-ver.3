@@ -5,6 +5,10 @@ import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
 import useStore from "@/store/state.js";
+import { useSyncExternalStore } from 'react';
+
+console.log('useSyncExternalStore:', useSyncExternalStore);
+
 const getNotion = require("../API/service.js");
 require("dotenv").config();
 
@@ -12,12 +16,13 @@ export const dynamic = "force-dynamic";
 export const metadata = { title: "홈", description: "루트 페이지" };
 
 async function run() {
-  const { initialize } = useStore();
+  const { initialData, initialize } = useStore();
 
   const addNewPost = (data) => {
     initialize(data);
 
     //데이터 정리해서 넣기
+    console.log("addNwePost", initialData)
   }
 
 
