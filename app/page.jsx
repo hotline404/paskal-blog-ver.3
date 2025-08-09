@@ -1,33 +1,21 @@
 // 루트 페이지 크기 및 페이지 색상
-"use client"
-
 import React from "react";
 import MainBox from "@/components/box/MainBox";
 import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
-import useStore from "@/store/state.js";
 const getNotion = require("../API/service.js");
 require("dotenv").config();
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "홈", description: "루트 페이지" };
 
+// zustand store list 컴포넌트에 넣기 'use client'로 해서 넣어야 함
 async function run() {
-  const { initialData, initialize } = useStore();
-
-  const addNewPost = (data) => {
-    initialize(data);
-
-    //데이터 정리해서 넣기
-    console.log("addNwePost", initialData)
-  }
-
 
   try {
     const res = await getNotion();
 
-    addNewPost(res);
     console.log("요청 성공");
 
     return res;
@@ -37,16 +25,15 @@ async function run() {
 }
 
 function Home() {
-  run()
   const homePageStyle = mixtureStyle;
   return (
     <div className={homePageStyle.base_note}>
       <MainBox BoxAttribute={homePageStyle.page}>
         <Header />
-        <ListBox />
+        <ListBox data={run()}/>
       </MainBox>
     </div>
   );
 }
 
-export default Home
+export default Home;
