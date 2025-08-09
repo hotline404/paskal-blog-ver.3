@@ -1,4 +1,4 @@
-
+"use client"
 import React from "react";
 import { mixtureStyle } from "../style/mixture/mixture";
 import { useRouter } from "next/navigation";
