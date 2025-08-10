@@ -16,7 +16,7 @@ function ListBox() {
     <div
       className={mixtureStyle.postListBox}
     >
-      <List lists={initialData[0]} />
+      <List lists={initialData} />
     </div>
   );
 }
