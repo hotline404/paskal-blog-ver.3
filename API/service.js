@@ -18,7 +18,8 @@ module.exports = async function getNotion () {
     return {
       id: page.id,
       title: page.properties.Name.title[0].text.content,
-      allProperties: page.properties
+      date: page.properties.date,
+      allProperties: page.properties,
     };
   });
 
