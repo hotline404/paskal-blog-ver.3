@@ -7,6 +7,7 @@ function Provider({ children, data }) {
 
 
   const {initialData, initialize} = useStore();
+  console.log("data in provider", data);
 
   initialize(data);
   console.log("stored data in initialData", initialData);
