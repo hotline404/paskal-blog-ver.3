@@ -12,7 +12,7 @@ function Provider({ children, data }) {
   
   useEffect(() => {
     console.log("initialData", initialData);
-  }, [initialize])
+  }, [])
   
   return (
     <div>

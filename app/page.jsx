@@ -17,8 +17,6 @@ async function run() {
   try {
     const res = await getNotion();
 
-    console.log("요청 성공");
-
     return res;
   } catch (error) {
     console.log("get error", error);
