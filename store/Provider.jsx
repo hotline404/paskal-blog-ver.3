@@ -13,7 +13,7 @@ function Provider({ children, data }) {
     
       console.log("debug in provider", initialData)
     
-  }, [initialize])
+  }, [initialData])
   
   return (
     <div>
