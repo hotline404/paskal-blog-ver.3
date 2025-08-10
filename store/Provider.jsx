@@ -9,13 +9,9 @@ function Provider({ children, data }) {
   const {initialData, initialize} = useStore();
   data.then(data => initialize(data));
 
-  console.log(initialData.then());
   
-  useEffect(() => {
-    
-      console.log("debug in provider", initialData)
-    
-  }, [initialData])
+
+  initialData.then(data => console.log("data in initial data", data))
   
   return (
     <div>
