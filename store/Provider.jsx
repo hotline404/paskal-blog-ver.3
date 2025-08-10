@@ -11,7 +11,6 @@ function Provider({ children, data }) {
 
   
 
-  initialData.then(data => console.log("data in initial data", data))
   
   return (
     <div>
