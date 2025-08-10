@@ -6,10 +6,10 @@ import useStore from './state';
 function Provider({ children, data }) {
 
 
-  const {initialDatani, initialize} = useStore();
+  const {initialData, initialize} = useStore();
 
   initialize(data);
-  console.log("stored data in initialData", initialDatani);
+  console.log("stored data in initialData", initialData);
   
   return (
     <div>
