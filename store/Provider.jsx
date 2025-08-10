@@ -5,7 +5,6 @@ import useStore from './state';
 
 function Provider({ children, data }) {
 
-  const data = data;
 
   const {initialDatani, initialize} = useStore();
 
