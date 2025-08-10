@@ -10,7 +10,7 @@ import useStore from "@/store/state";
 
 
 function ListBox() {
-    const initialData = useStore(state => state.initialData);
+    const initialData = useStore(state => state.initialData[0]);
     
   return (
     <div
