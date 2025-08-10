@@ -10,9 +10,9 @@ function Provider({ children, data }) {
   data.then(data => initialize(data));
 
   useEffect(() => {
-    (
+    
       console.log("debug in provider", initialData)
-    )
+    
   }, [initialize])
   
   return (
