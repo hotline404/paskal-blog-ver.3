@@ -5,6 +5,7 @@ import MainBox from "@/components/box/MainBox";
 import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
+import Provider from "@/store/Provider.jsx";
 const getNotion = require("../API/service.js");
 require("dotenv").config();
 
@@ -29,9 +30,10 @@ function Home() {
   const homePageStyle = mixtureStyle;
   return (
     <div className={homePageStyle.base_note}>
+      <Provider data={run()}/>
       <MainBox BoxAttribute={homePageStyle.page}>
         <Header />
-        <ListBox data={run()}/>
+        <ListBox />
       </MainBox>
     </div>
   );
