@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import useStore from './state';
 
 function Provider({ children, data }) {
@@ -9,8 +9,11 @@ function Provider({ children, data }) {
   const {initialData, initialize} = useStore();
   data.then(data => initialize(data));
 
-  
-  console.log("stored data in initialData", initialData);
+  useEffect(() => {
+    (
+      console.log("debug in provider", initialData)
+    )
+  }, [initialize])
   
   return (
     <div>
