@@ -4,7 +4,7 @@ const useStore = create((set) => ({
   initialData: [],
   searchedData: [],
   initialize: (newPost) =>
-    set((state) => ({ initialData: [...state.initialData, newPost] })),
+    set((state) => ({ initialData: newPost })),
   setSearchedData: (query) =>
     set(() => ({
       searchedData: [query],
