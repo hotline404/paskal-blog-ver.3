@@ -16,7 +16,7 @@ function List(props) {
         return (
           <li key={list.id} onClick={() => router.push('/items')}>
             <h1>{list.title}</h1>
-            <p>{list.date.date}</p>
+            <p>{list.date.date.start}</p>
           </li>
         );
       })}
