@@ -7,7 +7,7 @@ function Provider({ children, data }) {
   const { initialData, initialize } = useStore();
 
   useEffect(() => {
-    data.then((datas) => datas.forEach(data => initialize(data)));
+    data.then((data) => initialize(data));
     console.log("initialData1", initialData);
   }, [initialize]);
 
