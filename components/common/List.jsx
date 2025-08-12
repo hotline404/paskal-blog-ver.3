@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 function List(props) {
   const router = useRouter();
 
-
+  console.log("시발", props.lists)
   return (
     <ol className={mixtureStyle.postList}>
       {props.lists.map((list) => {
