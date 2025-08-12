@@ -12,7 +12,6 @@ import useStore from "@/store/state";
 function ListBox() {
     const initialData = useStore(state => state.initialData);
     const listDatas = initialData;
-    console.log("list datas", listDatas);
     
   return (
     <div
