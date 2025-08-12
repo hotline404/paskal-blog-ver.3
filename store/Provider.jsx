@@ -7,7 +7,7 @@ function Provider({ children, data }) {
   const { initialData, initialize } = useStore();
 
   useEffect(() => {
-    data.then((data) => initialize(data));
+    data.then((datas) => datas.map((data) => initialize(data)));
     console.log("initialData1", initialData);
   }, [initialize]);
 
