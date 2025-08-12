@@ -11,13 +11,14 @@ import useStore from "@/store/state";
 
 function ListBox() {
     const initialData = useStore(state => state.initialData);
-    const ListDatas = initialData[0];
+    const listDatas = initialData[0];
+    console.log("list datas", listDatas);
     
   return (
     <div
       className={mixtureStyle.postListBox}
     >
-      <List lists={ListDatas} />
+      <List lists={initialData} />
     </div>
   );
 }
