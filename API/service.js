@@ -52,8 +52,7 @@ exports.getPost = async function (page_id) {
     block_id: page_id,
   });
 
-  const para = results.filter((data) => data.type === "paragraph");
-  console.log("result block get", para);
+  console.log("result block get", results);
 
   results.forEach((result) => {
     const arr = result.paragraph.rich_text;
