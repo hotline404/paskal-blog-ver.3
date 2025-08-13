@@ -5,7 +5,7 @@ import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
 import Provider from "@/store/Provider.jsx";
-const { getNotion, getNotionUser } = require("../API/service.js");
+const { getNotion } = require("../API/service.js");
 require("dotenv").config();
 
 export const dynamic = "force-dynamic";
@@ -16,9 +16,7 @@ async function run() {
 
   try {
     const res = await getNotion();
-    const test = await getNotionUser();
 
-    console.log("test", test);
     return res;
   } catch (error) {
     console.log("get error", error);
