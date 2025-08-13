@@ -16,7 +16,7 @@ async function run() {
 
   try {
     const res = await getNotion();
-    const test = await getTraceEvents();
+    const test = await getNotionUser();
 
     console.log("test", test);
     return res;
