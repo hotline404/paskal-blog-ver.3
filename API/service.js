@@ -9,9 +9,15 @@ const notion = new Client({
 
 const db_id = notion_DB;
 
-module.exports = async function getNotion () {
+exports.getNotion = async function () {
   const { results } = await notion.databases.query({
     database_id: db_id,
+     filter: {
+      property: "상태",
+      status: {
+        equals: "공개",
+      },
+    },
   });
 
   console.log("시발 api 결과", results);
@@ -25,6 +31,10 @@ module.exports = async function getNotion () {
       icon: page.icon.emoji
     };
   });
+
+  exports.getPost = async function (post_id) {
+    const { results } = await notion.
+  }
 
 
   return post
