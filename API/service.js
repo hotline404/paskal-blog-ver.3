@@ -31,12 +31,13 @@ exports.getNotion = async function () {
       icon: page.icon.emoji
     };
   });
-
-  exports.getPost = async function (post_id) {
-    const { results } = await notion.
-  }
-
-
+  
+  
   return post
-
+  
 };
+
+
+  // exports.getPost = async function (post_id) {
+  //   const { results } = await notion.
+  // }
