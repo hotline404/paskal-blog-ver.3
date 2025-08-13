@@ -53,10 +53,10 @@ exports.getPost = async function (page_id) {
   });
 
   const para = results.filter((data) => data.type === "paragraph");
+  console.log("result block get", para);
 
   results.forEach((result) => {
     const arr = result.block.paragraph.rich_text;
     console.log("arr", arr)
   });
-  console.log("result block get", para);
 };
