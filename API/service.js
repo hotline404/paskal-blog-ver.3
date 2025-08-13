@@ -54,7 +54,8 @@ exports.getPost = async function (page_id) {
     block_id: page_id,
   })
 
-  console.log("result block get", results);
+  const para = results.filter(data => data.type === 'paragraph')
+  console.log("result block get", para);
 }
 
 
