@@ -14,6 +14,8 @@ module.exports = async function getNotion () {
     database_id: db_id,
   });
 
+  console.log("시발 api 결과", results);
+
    const post = results.map((page) => {
     return {
       id: page.id,
