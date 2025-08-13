@@ -1,3 +1,4 @@
+const { userAgent } = require("next/server.js");
 const {notion_key, notion_DB} = require("./instance.js");
 // import { NotionAPI } from "notion-client";
 const { Client } = require("@notionhq/client");
@@ -47,5 +48,13 @@ exports.getNotion = async function () {
 //   console.log("getPost notion api", results);
 
 // }
+
+exports.getPost = async function (page_id) {
+  const { results } = await notion.blocks.children.list({
+    block_id: page_id,
+  })
+
+  console.log("result block get", results);
+}
 
 
