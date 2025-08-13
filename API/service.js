@@ -41,8 +41,12 @@ exports.getNotion = async function () {
   
 
 
-  // exports.getPost = async function (post_id) {
-  //   const { results } = await notion.
-  // }
+  exports.getPost = async function () {
+    const results = await notion.blocks.children.list({
+      database_id: db_id
+    })
+
+    console.log("아 몰랑", results)
+  }
 
 
