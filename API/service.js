@@ -38,6 +38,15 @@ exports.getNotion = async function () {
 };
 
 
+  exports.getNotionBlock = async function (blocks_id) {
+    const results = await notion.blocks.retrieve({
+      block_id: blocks_id,
+    })
+
+    console.log("results in getNotionBlock", results);
+  }
+
+
   // exports.getPost = async function (post_id) {
   //   const { results } = await notion.
   // }
