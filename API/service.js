@@ -43,7 +43,7 @@ exports.getNotion = async function () {
 
   exports.getPost = async function () {
     const results = await notion.blocks.children.list({
-      database_id: db_id
+      page_id: "2451600f-02ad-80e5-b932-c90add82d2ae",
     })
 
     console.log("아 몰랑", results)
