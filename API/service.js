@@ -39,7 +39,7 @@ exports.getNotion = async function () {
 
 
   exports.getNotionBlock = async function (blocks_id) {
-    const results = await notion.blocks.retrieve({
+    const results = await notion.blocks.children.list({
       block_id: blocks_id,
     })
 

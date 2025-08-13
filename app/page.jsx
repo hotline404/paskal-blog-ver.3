@@ -16,7 +16,7 @@ async function run() {
 
   try {
     const res = await getNotion();
-    const test = await getNotionBlock("bf2f57ce-2642-4a6a-94d1-2ad6467674ab");
+    const test = await getNotionBlock("2451600f02ad80e5b932c90add82d2ae");
     test.then(data => console.log("getNotionBlock in root page", data))
     return res;
   } catch (error) {
