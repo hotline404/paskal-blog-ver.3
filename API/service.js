@@ -56,7 +56,7 @@ exports.getPost = async function (page_id) {
   console.log("result block get", para);
 
   results.forEach((result) => {
-    const arr = result.block.paragraph.rich_text;
+    const arr = result.paragraph.rich_text;
     console.log("arr", arr)
   });
 };
