@@ -1,11 +1,13 @@
 const {notion_key, notion_DB} = require("./instance.js");
-
+import { NotionAPI } from "notion-client";
 const { Client } = require("@notionhq/client");
 
 const notion = new Client({
   auth: notion_key,
   request_timeout: 10000,
 });
+
+const notionAPI = new NotionAPI();
 
 const db_id = notion_DB;
 
@@ -37,23 +39,10 @@ exports.getNotion = async function () {
   
 };
 
+exports.getPost = async function (page_id) {
+  const results = await notionAPI.getPage(page_id)
+  console.log("getPost notion api", results);
 
-  
-
-
-  exports.getPost = async function () {
-    const results = await notion.blocks.children.list({
-      block_id: "2451600f-02ad-80e5-b932-c90add82d2ae",
-    })
-
-    console.log("아 몰랑", results)
-  }
-
-  exports.getSibal = async function () {
-    const results = await notion.pages.retrieve({
-    page_id: "2451600f-02ad-80e5-b932-c90add82d2ae",
-  })
-
-  console.log("아 시발", results)
 }
+
 
