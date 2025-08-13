@@ -17,7 +17,7 @@ async function run() {
   try {
     const res = await getNotion();
 
-    getPost();
+    await getPost();
     return res;
   } catch (error) {
     console.log("get error", error);
