@@ -55,7 +55,12 @@ exports.getPost = async function (page_id) {
   console.log("result block get", results);
 
   results.forEach((result) => {
-    const arr = result.paragraph.rich_text;
-    console.log("arr", arr)
+
+    if (result.type === 'paragraph') {
+      console.log("arr paragraph", result.paragraph.rich_text)
+    } else if ( result.type === 'image') {
+      console.log('arr image',result.image.file )
+    }
+
   });
 };
