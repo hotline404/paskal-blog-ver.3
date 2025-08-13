@@ -39,11 +39,10 @@ exports.getNotion = async function () {
 
 
 exports.getNotionUser = async function () {
-  const results = await notion.pages.retrieve({
+  const results = await notion.users.list({
     database_id: db_id,
-    page_id: "2451600f-02ad-80e5-b932-c90add82d2ae",
-  });
-  console.log("results", results);
+  })
+  console.log("users", results);
 }
 
 
