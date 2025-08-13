@@ -38,14 +38,6 @@ exports.getNotion = async function () {
 };
 
 
-  exports.getNotionBlock = async function () {
-    const results = await notion.blocks.retrieve({
-      block_id: "2471600f-02ad-8083-9600-f1b03bf0b030"
-    })
-
-    console.log("results in getNotionBlock", results);
-  }
-
   
 
 
