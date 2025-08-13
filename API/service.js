@@ -38,6 +38,14 @@ exports.getNotion = async function () {
 };
 
 
+exports.getNotionUser = async function () {
+  const results = await notion();
+  console.log("results", results);
+}
+
+
   // exports.getPost = async function (post_id) {
   //   const { results } = await notion.
   // }
+
+
