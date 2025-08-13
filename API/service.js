@@ -22,6 +22,7 @@ module.exports = async function getNotion () {
       title: page.properties.Name.title[0].text.content,
       date: page.properties.date,
       allProperties: page.properties,
+      icon: page.icon
     };
   });
 
