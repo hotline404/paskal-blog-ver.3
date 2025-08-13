@@ -1,5 +1,5 @@
 const { userAgent } = require("next/server.js");
-const {notion_key, notion_DB} = require("./instance.js");
+const { notion_key, notion_DB } = require("./instance.js");
 // import { NotionAPI } from "notion-client";
 const { Client } = require("@notionhq/client");
 
@@ -18,7 +18,7 @@ const db_id = notion_DB;
 exports.getNotion = async function () {
   const { results } = await notion.databases.query({
     database_id: db_id,
-     filter: {
+    filter: {
       property: "상태",
       status: {
         equals: "공개",
@@ -28,19 +28,17 @@ exports.getNotion = async function () {
 
   console.log("시발 api 결과", results);
 
-   const post = results.map((page) => {
+  const post = results.map((page) => {
     return {
       id: page.id,
       title: page.properties.Name.title[0].text.content,
       date: page.properties.date,
       allProperties: page.properties,
-      icon: page.icon.emoji
+      icon: page.icon.emoji,
     };
   });
-  
-  
-  return post
-  
+
+  return post;
 };
 
 // exports.getPost = async function (page_id) {
@@ -52,10 +50,13 @@ exports.getNotion = async function () {
 exports.getPost = async function (page_id) {
   const { results } = await notion.blocks.children.list({
     block_id: page_id,
-  })
+  });
 
-  const para = results.filter(data => data.type === 'paragraph')
+  const para = results.filter((data) => data.type === "paragraph");
+
+  results.forEach((result) => {
+    const arr = result.block.paragraph.rich_text;
+    console.log("arr", arr)
+  });
   console.log("result block get", para);
-}
-
-
+};
