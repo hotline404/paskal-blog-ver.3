@@ -7,7 +7,7 @@ export const size = {
     tag: "",
     titleBox: "w-[100%] top-0 pt-[12px]",
     postListBox: "w-[100%] px-[20px]",
-    postList: "w-[100%]  mt-[90px] mb-[40px] [&_li]:w-[calc(90%/3)] [&_li]:rounded-[10px] [&_li]:mx-[10px] [&_li]:my-[21px] [&_li]:p-[10px]",
+    postList: "w-[100%]  mt-[80px] mb-[40px] [&_li]:w-[calc(90%/3)] [&_li]:rounded-[10px] [&_li]:mx-[10px] [&_li]:my-[21px] [&_li]:p-[10px]",
 
     modal_background: "",
     modal_page: "",
@@ -33,7 +33,7 @@ export const size = {
     modal_titleBox: "",
     modal_aticleBox: "",
     escButton: "",
-    header: "h-[90px]",
+    header: "h-[80px]",
   },
 
   font: {
