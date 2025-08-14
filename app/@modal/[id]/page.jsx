@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 function Post() {
   const router = useRouter();
-  const id = router.query.items;
+  const id = router.query.id;
   console.log("id in modal page", id);
 
   return (
