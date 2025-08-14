@@ -1,13 +1,14 @@
 'use client'
 import React from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 
 export const dynamic = "force-dynamic";
 
 function Post() {
   const router = useRouter();
-  const id = router;
-  console.log("id in modal page", id);
+  const params = useParams();
+  
+  console.log("id in modal page", params);
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
