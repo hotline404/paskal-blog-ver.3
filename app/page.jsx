@@ -8,12 +8,13 @@ import Provider from "@/store/Provider.jsx";
 const { getNotion, getPost } = require("../API/service.js");
 require("dotenv").config();
 
+//page 정보
 export const dynamic = "force-dynamic";
 export const metadata = { title: "* p a s k a l ' s   b l o g *", description: "루트 페이지" };
 
-// zustand store list 컴포넌트에 넣기 'use client'로 해서 넣어야 함
 async function run() {
 
+  // notion api 연결 및 디버깅
   try {
     const res = await getNotion();
 
