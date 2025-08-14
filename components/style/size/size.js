@@ -37,7 +37,7 @@ export const size = {
   },
 
   font: {
-    title: "text-[2.5rem] font-bold ",
+    title: "text-[2.5rem] font-bold italic",
     input: "",
     tag: "",
     modal_aticle: "[&_li]:font-bold",
