@@ -6,6 +6,8 @@ export const dynamic = "force-dynamic";
 
 function Post() {
   const router = useRouter();
+  const id = router.query.items;
+  console.log("id in modal page", id);
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">

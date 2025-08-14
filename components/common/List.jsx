@@ -11,8 +11,10 @@ function List(props) {
   const router = useRouter();
   
 
-  const onClickHandler = () => {
-    router.push('/items');
+  const onClickHandler = (id) => {
+
+    const items = id;
+    router.push(`/${items}`);
 
 
   };
@@ -21,7 +23,7 @@ function List(props) {
     <ol className={mixtureStyle.postList}>
       {props.lists.map((list) => {
         return (
-          <li key={list.id} onClick={() => router.push('/items')}>
+          <li key={list.id} onClick={() => onClickHandler(id)}>
             <p>{list.icon}</p>
             <h1>{list.title}</h1>
             <p>{list.date.date.start}</p>
