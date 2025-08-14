@@ -18,7 +18,6 @@ async function run() {
   try {
     const res = await getNotion();
 
-    await getPost("2451600f02ad8078bd65c94c1e16f05e");
     return res;
   } catch (error) {
     console.log("get error", error);

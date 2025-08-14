@@ -19,8 +19,6 @@ exports.getNotion = async function () {
     },
   });
 
-  console.log("시발 api 결과", results);
-
   const post = results.map((page) => {
     return {
       id: page.id,
@@ -43,7 +41,6 @@ exports.getPost = async function (page_id) {
     block_id: page_id,
   });
 
-  console.log("result block get", results);
 
   return results;
 
