@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "paskal - 파스칼",
-  description: "파스칼의 블로그, paskal's blog",
+  title: "p a s k a l - 파스칼",
+  description: "파스칼의 블로그, p a s k a l ' s   b l o g",
 };
 
 // layout.js
