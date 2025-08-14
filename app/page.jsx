@@ -9,7 +9,7 @@ const { getNotion, getPost } = require("../API/service.js");
 require("dotenv").config();
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "홈", description: "루트 페이지" };
+export const metadata = { title: "* p a s k a l ' s   b l o g *", description: "루트 페이지" };
 
 // zustand store list 컴포넌트에 넣기 'use client'로 해서 넣어야 함
 async function run() {
