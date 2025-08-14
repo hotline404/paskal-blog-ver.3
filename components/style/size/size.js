@@ -7,7 +7,7 @@ export const size = {
     tag: "",
     titleBox: "w-[100%] top-0 pt-[12px]",
     postListBox: "w-[100%] px-[20px]",
-    postList: "w-[100%]  mt-[7%] mb-[40px] [&_li]:w-[calc(90%/3)] [&_li]:rounded-[10px] [&_li]:mx-[10px] [&_li]:my-[21px] [&_li]:p-[10px]",
+    postList: "w-[100%]  mt-[10%] mb-[40px] [&_li]:w-[calc(90%/3)] [&_li]:rounded-[10px] [&_li]:mx-[10px] [&_li]:my-[21px] [&_li]:p-[10px]",
 
     modal_background: "",
     modal_page: "",
