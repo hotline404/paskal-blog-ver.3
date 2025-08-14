@@ -6,8 +6,8 @@ export const size = {
     searchBox: "absolute bottom-0 w-[100%] [&_input]:w-[30%] [&_input]:mx-[12px] [&_input]:my-[12px]  [&_input]:px-[10px]",
     tag: "",
     titleBox: "w-[100%] top-0 pt-[12px]",
-    postListBox: "w-[100%] ",
-    postList: "w-[100%]  mt-[10%] mb-[40px] [&_li]:w-[calc(90%/3)] [&_li]:rounded-[10px] [&_li]:mx-[10px] [&_li]:my-[21px] [&_li]:p-[10px]",
+    postListBox: "w-[100%] px-[20px]",
+    postList: "w-[100%]  mt-[20px] mb-[40px] [&_li]:w-[calc(90%/3)] [&_li]:rounded-[10px] [&_li]:mx-[10px] [&_li]:my-[21px] [&_li]:p-[10px]",
 
     modal_background: "",
     modal_page: "",
@@ -33,7 +33,7 @@ export const size = {
     modal_titleBox: "",
     modal_aticleBox: "",
     escButton: "",
-    header: "h-[10%]",
+    header: "h-[20px]",
   },
 
   font: {
