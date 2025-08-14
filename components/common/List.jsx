@@ -13,8 +13,7 @@ function List(props) {
 
   const onClickHandler = (id) => {
 
-    const items = id;
-    router.push(`/${items}`);
+    router.push(`/${id}`);
 
 
   };
