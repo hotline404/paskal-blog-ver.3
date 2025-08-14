@@ -11,7 +11,7 @@ function Post() {
   async function tryGet (id) {
     try {
     const res = await getPost(id);
-    res.then(data => console.log("data in post modal", data))
+    console.log("* r e s   i n   p o s t   m o d a l *", res)
   } catch (error) {
     console.error("e r r o r   i n   P o s t   m o d a l", error)
   }
