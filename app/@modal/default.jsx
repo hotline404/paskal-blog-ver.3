@@ -2,6 +2,8 @@
 import React from "react";
 import { useRouter } from "next/router";
 
+export const dynamic = "force-dynamic";
+
 function Default() {
   const router = useRouter();
   return (
@@ -14,7 +16,7 @@ function Default() {
           }}
           className="mt-4 text-sm text-gray-500 hover:cursor-pointer"
         >
-          닫기
+          C L O S S
         </button>
       </div>
     </div>
