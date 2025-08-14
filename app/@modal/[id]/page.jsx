@@ -1,13 +1,9 @@
-'use client'
 import React from 'react'
-import { useRouter, useParams } from 'next/navigation'
 import { getPost } from '@/API/service';
 
 export const dynamic = "force-dynamic";
 
-function Post() {
-  const router = useRouter();
-  const params = useParams();
+function Post({ params }) {
   async function tryGet (id) {
     try {
     const res = await getPost(id);
@@ -23,9 +19,9 @@ function Post() {
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-xl">
         <h2>* P O S T   P A G E *</h2>
-        <button onClick={() => {router.back()}} className="mt-4 text-sm text-gray-500 hover:cursor-pointer">
+        <a href='/' className="mt-4 text-sm text-gray-500 hover:cursor-pointer">
           C L O S E
-        </button>
+        </a>
       </div>
     </div>
   )
