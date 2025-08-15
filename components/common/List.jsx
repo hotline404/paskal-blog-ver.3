@@ -7,7 +7,7 @@ import useStore from "@/store/state";
 //리스트 캡슐화하기
 //x축 800px부터는 미디어 쿼리 적용하기
 //클라이언트
-function List({ onSelect }) {
+function List({ onClick }) {
   const router = useRouter();
 
   const initialData = useStore((state) => state.initialData);
@@ -15,7 +15,7 @@ function List({ onSelect }) {
 
   const onClickHandler = (title, id) => {
     router.push(`/${title}`);
-    onSelect(id);
+    onClick(id);
   };
 
   return (
