@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { mixtureStyle } from "../style/mixture/mixture";
 import { useRouter } from "next/navigation";
 import useStore from "@/store/state";
@@ -7,15 +7,21 @@ import useStore from "@/store/state";
 //리스트 캡슐화하기
 //x축 800px부터는 미디어 쿼리 적용하기
 //클라이언트
-function List({ onClick }) {
+function List() {
   const router = useRouter();
 
   const initialData = useStore((state) => state.initialData);
+  const setPostData = useStore((state) => state.setPostData);
+  const postData = useStore((state)=> state.postData)
   const listDatas = initialData;
 
   const onClickHandler = (title, id) => {
-    router.push(`/${title}`);
-    onClick(id);
+    setPostData(id);
+    
+    useEffect(() => {
+      router.push(`/${title}`);
+      console.log("store postData", postData)
+    }, [setPostData])
   };
 
   return (
