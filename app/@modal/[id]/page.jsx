@@ -16,7 +16,7 @@ function Post({ params }) {
   
   // tryGet(params.id);
 
-  getPost(params.id).then(data => {console.log(data)})
+  getPost(params.id).then(data => {console.log("data in modal", data)})
 
 
   return (
