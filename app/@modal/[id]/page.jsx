@@ -5,18 +5,18 @@ import BackButton from '@/components/Button/BackButton';
 export const dynamic = "force-dynamic";
 
 function Post({ params }) {
-  // async function tryGet (id) {
-  //   try {
-  //   const res = await getPost(id);
-  //   console.log("* r e s   i n   p o s t   m o d a l *", res)
-  // } catch (error) {
-  //   console.error("e r r o r   i n   P o s t   m o d a l", error)
-  // }
-  // }
+  async function tryGet (id) {
+    try {
+    const res = await getPost(id);
+    console.log("* r e s   i n   p o s t   m o d a l *", res)
+  } catch (error) {
+    console.error("e r r o r   i n   P o s t   m o d a l", error)
+  }
+  }
   
-  // tryGet(params.id);
+  tryGet(params.id);
 
-  getPost(params.id).then(data => {console.log("data in modal", data)})
+ // getPost(params.id).then(data => {console.log("data in modal", data)})
 
 
   return (
