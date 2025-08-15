@@ -13,7 +13,7 @@ function ListBox() {
     <div
       className={mixtureStyle.postListBox}
     >
-      <List onSelect={selectHander}/>
+      <List onClick={selectHander}/>
     </div>
   );
 }
