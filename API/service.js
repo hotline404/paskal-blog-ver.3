@@ -1,9 +1,15 @@
-const { notion_key, notion_DB } = require("./instance.js");
+const { notion_key, notion_DB, notion_token_v2, notion_user_id } = require("./instance.js");
 const { Client } = require("@notionhq/client");
+import { NotionAPI } from "notion-client";
 
 const notion = new Client({
   auth: notion_key,
   request_timeout: 100000,
+});
+
+const notionAPI = new NotionAPI({
+  activeUser: notion_user_id,
+  authToken: notion_token_v2
 });
 
 const db_id = notion_DB;
@@ -60,11 +66,8 @@ exports.getPost = async function (page_id) {
 
 
 exports.getTest = async function (page_id) {
-  const { results } = await notion.blocks.retrieve({
-    block_id: page_id,
-    page_size: 50,
-  })
-  
-  console.log("results in test for blocks", results);
+  const res = await notionAPI.getPage(page_id)
 
+
+  console.log("res in notion api get page", res);
 }
