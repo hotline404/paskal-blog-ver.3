@@ -1,6 +1,7 @@
 import React from 'react'
 import { getPost, getTest } from '@/API/service';
 import BackButton from '@/components/Button/BackButton';
+import Article from '@/components/common/Article';
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -24,7 +25,7 @@ function Post({ params }) {
       <div className="bg-white p-6 rounded-xl">
         <h2>* P O S T   P A G E *</h2>
         <div>
-          
+          <Article data={result}/>
         </div>
         <BackButton className="mt-4 text-sm text-gray-500 hover:cursor-pointer">
           C L O S E
