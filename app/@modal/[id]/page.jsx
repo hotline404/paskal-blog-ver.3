@@ -14,13 +14,10 @@ function Post({ params }) {
   } catch (error) {
     console.error("e r r o r   i n   P o s t   m o d a l", error)
   }
-  }
-  getTest(params.id).then(data => console.log("get block test", data))
-  getPost(params.id).then(data => console.log("밖에서 한번 조져보는 console.log", data))
-  
+  }  
   //tryGet(params.id).then(promise => console.log("log of tryGet in post modal", promise));
 
- // getPost(params.id).then(data => {console.log("data in modal", data)})
+ getPost(params.id).then(data => {console.log("data in modal", data)})
 
 
   return (
