@@ -6,20 +6,19 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 function Post({ params }) {
-  // async function tryGet (id) {
-  //   try {
-  //   const res = await getPost(id);
-  //   console.log("* r e s   i n   p o s t   m o d a l *", res)
-  //   return res
-  // } catch (error) {
-  //   console.error("e r r o r   i n   P o s t   m o d a l", error)
-  // }
-  // }  
-  //tryGet(params.id).then(promise => console.log("log of tryGet in post modal", promise));
+  async function tryGet (id) {
+    try {
+    const res = await getPost(id);
+    console.log("* r e s   i n   p o s t   m o d a l *", res)
+    return res
+  } catch (error) {
+    console.error("e r r o r   i n   P o s t   m o d a l", error)
+  }
+  }  
 
-// getPost(params.id).then(data => {console.log("data in modal", data)})
+  tryGet(params.id);
 
-  getTest(params.id).then(data => console.log("get test in post modal", data))
+  
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-xl">
