@@ -15,8 +15,10 @@ function Post({ params }) {
     console.error("e r r o r   i n   P o s t   m o d a l", error)
   }
   }
+
+  getPost(params.id)
   
-  tryGet(params.title).then(promise => console.log("log of tryGet in post modal", promise));
+  tryGet(params.id).then(promise => console.log("log of tryGet in post modal", promise));
 
  // getPost(params.id).then(data => {console.log("data in modal", data)})
 
