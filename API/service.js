@@ -60,6 +60,7 @@ exports.getPost = async function (page_id) {
 exports.getTest = async function (page_id) {
   const { results } = await notion.blocks.retrieve({
     block_id: page_id,
+    page_size: 50,
   })
   
   console.log("results in test for blocks", results);
