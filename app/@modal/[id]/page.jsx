@@ -16,7 +16,7 @@ function Post({ params }) {
   }
   }
 
-  console.log("밖에서 한번 해보는 console.log()", getPost(params.id))
+  getPost(params.id).then(data => console.log("밖에서 한번 조져보는 console.log", data))
   
   tryGet(params.id).then(promise => console.log("log of tryGet in post modal", promise));
 
