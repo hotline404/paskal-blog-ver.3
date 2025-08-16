@@ -18,9 +18,9 @@ async function run() {
   try {
     const res = await getNotion();
     const post = await getPost('2451600f-02ad-8078-bd65-c94c1e16f05e');
-    const test = await getTest('2451600f-02ad-8078-bd65-c94c1e16f05e');
+    //const test = await getTest('2451600f-02ad-8078-bd65-c94c1e16f05e');
     console.log("post in root", post);
-    console.log("test in root", test);
+    //console.log("test in root", test);
     return res;
   } catch (error) {
     console.log("get error", error);
