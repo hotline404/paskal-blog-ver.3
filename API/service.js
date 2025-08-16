@@ -54,3 +54,16 @@ exports.getPost = async function (page_id) {
 
   // });
 };
+
+
+exports.getTest = async function () {
+  const results = await fetch(`https://api.notion.com/v1/databases/${db_id}`, {
+  headers: {
+    Authorization: `Bearer ${notion_key}`,
+  }
+});
+
+  console.log("results of fetch db", results.json())
+
+return results.json();
+}

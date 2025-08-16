@@ -5,7 +5,7 @@ import { mixtureStyle } from "@/components/style/mixture/mixture";
 import Header from "@/components/header/Header";
 import ListBox from "@/components/box/ListBox";
 import Provider from "@/store/Provider.jsx";
-const { getNotion, getPost } = require("../API/service.js");
+const { getNotion, getTest } = require("../API/service.js");
 require("dotenv").config();
 
 //page 정보
@@ -17,7 +17,8 @@ async function run() {
   // notion api 연결 및 디버깅
   try {
     const res = await getNotion();
-
+    const res3 = await getTest();
+    console.log("xxxxxx", res3)
     return res;
   } catch (error) {
     console.log("get error", error);
