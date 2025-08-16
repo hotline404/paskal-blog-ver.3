@@ -51,7 +51,7 @@ exports.getPost = async function (page_id) {
 
   console.log("results in getPost notion api", results)
 
-  //return results;
+  return results;
 
   // results.forEach((result) => {
 
