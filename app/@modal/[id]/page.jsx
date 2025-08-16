@@ -15,7 +15,7 @@ function Post({ params }) {
   }
   }
   
-  tryGet(params.title);
+  console.log("fucking notion api", tryGet(params.title));
 
  // getPost(params.id).then(data => {console.log("data in modal", data)})
 
