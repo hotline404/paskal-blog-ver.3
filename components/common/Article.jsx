@@ -7,11 +7,11 @@ function Article({ data }) {
       {data.map((item) => {
         if (item.type === 'paragraph') {
           return (
-            <p>{item.paragraph.rich_text[0]}</p>
+            <p>{item.paragraph.rich_text}</p>
           )
         } else if (item.type === 'image') {
           return (
-            <img src={item.image.file[0]} alt='test'></img>
+            <img src={item.image.file} alt='test'></img>
           )
         }
       })}
@@ -19,4 +19,4 @@ function Article({ data }) {
   )
 }
 
-export default Article
+export default Article;
