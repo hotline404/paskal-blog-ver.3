@@ -3,6 +3,7 @@ import { getPost } from '@/API/service';
 import BackButton from '@/components/Button/BackButton';
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 function Post({ params }) {
   async function tryGet (id) {
