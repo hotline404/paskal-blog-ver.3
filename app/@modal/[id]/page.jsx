@@ -10,6 +10,7 @@ function Post({ params }) {
     try {
     const res = await getPost(id);
     console.log("* r e s   i n   p o s t   m o d a l *", res)
+    return res
   } catch (error) {
     console.error("e r r o r   i n   P o s t   m o d a l", error)
   }
