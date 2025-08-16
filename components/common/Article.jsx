@@ -4,17 +4,17 @@ import React from 'react'
 function Article({ data }) {
   return (
     <div>
-      {data.map((item) => {
+      {data ? data.map((item) => {
         if (item.type === 'paragraph') {
           return (
-            <p>{item.paragraph.rich_text}</p>
+            <p>{item.paragraph.rich_text[0]}</p>
           )
         } else if (item.type === 'image') {
           return (
-            <img src={item.image.file} alt='test'></img>
+            <img src={item.image.file[0]} alt='test'></img>
           )
-        }
-      })}
+        } 
+      } ): <div>Loading...</div>} 
     </div>
   )
 }
