@@ -37,12 +37,13 @@ exports.getNotion = async function () {
 
 
 exports.getPost = async function (page_id) {
-  const { results } = await notion.blocks.children.list({
+  const results = await notion.blocks.children.list({
     block_id: page_id,
   });
 
+  console.log("results in getPost notion api", results)
 
-  return results;
+  //return results;
 
   // results.forEach((result) => {
 
@@ -54,3 +55,13 @@ exports.getPost = async function (page_id) {
 
   // });
 };
+
+
+exports.getTest = async function () {
+  const { results } = await notion.blocks.retrieve({
+    block_id: page_id,
+  })
+  
+  console.log("results in test for blocks", results);
+
+}
