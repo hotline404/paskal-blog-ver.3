@@ -57,7 +57,7 @@ exports.getPost = async function (page_id) {
 };
 
 
-exports.getTest = async function () {
+exports.getTest = async function (page_id) {
   const { results } = await notion.blocks.retrieve({
     block_id: page_id,
   })
