@@ -43,7 +43,7 @@ exports.getNotion = async function () {
 
 
 exports.getPost = async function (page_id) {
-  const results = await notion.blocks.children.list({
+  const {results} = await notion.blocks.children.list({
     block_id: page_id,
     page_size: 50,
 
