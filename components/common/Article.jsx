@@ -6,6 +6,7 @@ function Article({ data }) {
 
   useEffect(() => {
     const items = data.then((items) => {
+      console.log("items", items)
       return items;
     });
     setBlocks([items]);
