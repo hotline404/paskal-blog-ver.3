@@ -11,7 +11,6 @@ function Article({ data }) {
       return items;
     });
 
-    console.log("blocks, in the Article", items);
   }, [setBlocks]);
 
   console.log("blocks", blocks);
