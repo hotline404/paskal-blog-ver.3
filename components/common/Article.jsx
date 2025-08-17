@@ -17,7 +17,7 @@ function Article({ data }) {
   return (
     <div>
       {blocks ? (
-        blocks.map((item) => {
+        blocks?.map((item) => {
           switch (item.type) {
             case "paragraph":
               return (
