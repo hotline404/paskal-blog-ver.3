@@ -13,7 +13,7 @@ function Article({ data }) {
 
   }, [setBlocks]);
 
-  console.log("blocks", blocks[0]?.paragraph.rich_text[0].text.content);
+  console.log("blocks", blocks[0]?.image);
   return (
     <div>
       {blocks ? (
@@ -21,7 +21,7 @@ function Article({ data }) {
           switch (item.type) {
             case "paragraph":
               return (
-                <p>{item.paragraph.rich_text.text.content}</p>
+                <p>{item.paragraph.rich_text[0].text.content}</p>
               );
             case "image":
               return (
