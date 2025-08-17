@@ -13,7 +13,7 @@ function Article({ data }) {
 
   }, [setBlocks]);
 
-  console.log("blocks", blocks);
+  console.log("blocks", blocks[0].type);
   return (
     <div>
       {blocks ? (
