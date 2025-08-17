@@ -5,6 +5,8 @@ function Article({ data }) {
   const items = data.then((items) => {
     return items;
   });
+
+  console.log("items", items)
   return (
     <div>
       {!items ? (
