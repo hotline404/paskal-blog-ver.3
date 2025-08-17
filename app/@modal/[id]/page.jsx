@@ -17,7 +17,7 @@ function Post({ params }) {
   }
   }  
 
-  const result = tryGet(params.id);
+  const result = tryGet(params.id).then(data => {return data});
 
   
   return (
