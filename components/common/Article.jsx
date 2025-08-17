@@ -12,7 +12,7 @@ function Article({ data }) {
     setBlocks([items]);
 
     console.log("blocks, in the Article", blocks);
-  }, [setBlocks]);
+  }, [items]);
 
 
 
