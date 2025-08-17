@@ -27,9 +27,6 @@ function Article({ data }) {
               return (
                 <img src={item.image.file} alt="포스트 이미지" />
               )
-
-            default:
-              break;
           }
         })
       ) : (
