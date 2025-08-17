@@ -7,7 +7,7 @@ function Article({ data }) {
   useEffect(() => {
     data.then((items) => {
       console.log("items", items);
-      setBlocks([items]);
+      setBlocks(items);
       return items;
     });
 
@@ -18,14 +18,14 @@ function Article({ data }) {
     <div>
       {blocks ? (
         blocks.map((item) => {
-          switch (item[0].type) {
+          switch (item.type) {
             case "paragraph":
               return (
-                <p>{item[0].paragraph.rich_text}</p>
+                <p>{item.paragraph.rich_text}</p>
               );
             case "image":
               return (
-                <img src={item[0].image.file} alt="포스트 이미지" />
+                <img src={item.image.file} alt="포스트 이미지" />
               )
           }
         })
