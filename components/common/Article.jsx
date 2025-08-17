@@ -13,7 +13,7 @@ function Article({ data }) {
 
   }, [setBlocks]);
 
-  console.log("blocks", blocks[0]?.type);
+  console.log("blocks", blocks[0]?.paragraph.rich_text);
   return (
     <div>
       {blocks ? (
