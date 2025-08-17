@@ -1,15 +1,24 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Article({ data }) {
-  const items = data.then((items) => {
-    return items;
-  });
+  const [blocks, setBlocks] = useState([]);
 
-  console.log("items", items)
+  useEffect(() => {
+    const items = data.then((items) => {
+      return items;
+    });
+    setBlocks([items]);
+
+    console.log("blocks, in the Article", blocks);
+  }, [setBlocks]);
+
+
+
+  console.log("items", items);
   return (
     <div>
-      {!items ? (
+      {items ? (
         items.map((item) => {
           console.log("debug in item", item);
         })
