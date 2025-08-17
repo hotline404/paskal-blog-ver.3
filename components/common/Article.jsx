@@ -18,14 +18,14 @@ function Article({ data }) {
     <div>
       {blocks ? (
         blocks.map((item) => {
-          switch (item.type) {
+          switch (item[0].type) {
             case "paragraph":
               return (
-                <p>{item.paragraph.rich_text}</p>
+                <p>{item[0].paragraph.rich_text}</p>
               );
             case "image":
               return (
-                <img src={item.image.file} alt="포스트 이미지" />
+                <img src={item[0].image.file} alt="포스트 이미지" />
               )
           }
         })
