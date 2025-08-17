@@ -2,6 +2,7 @@ import React from 'react'
 import { getPost, getTest } from '@/API/service';
 import BackButton from '@/components/Button/BackButton';
 import Article from '@/components/common/Article';
+import Provider from '@/store/Provider';
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;

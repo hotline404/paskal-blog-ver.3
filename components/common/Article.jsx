@@ -3,7 +3,7 @@ import React from 'react'
 
 function Article({ data }) {
 
-  console.log("data in Article", data);
+  data.then(item => console.log("item in Article", item));
   return (
     <div>
       {data ? data.map((item) => {
