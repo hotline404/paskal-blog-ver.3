@@ -18,7 +18,19 @@ function Article({ data }) {
     <div>
       {blocks ? (
         blocks.map((item) => {
-          console.log("debug in item", item);
+          switch (item.type) {
+            case "paragraph":
+              return (
+                <p>{item.paragraph.rich_text}</p>
+              );
+            case "image":
+              return (
+                <img src={item.image.file} alt="포스트 이미지" />
+              )
+
+            default:
+              break;
+          }
         })
       ) : (
         <div>Loading...</div>
