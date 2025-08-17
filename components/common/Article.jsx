@@ -7,7 +7,7 @@ function Article({ data }) {
   });
   return (
     <div>
-      {items ? (
+      {!items ? (
         items.map((item) => {
           return <div>{item.paragraph.rich_text[0]}</div>;
         })
