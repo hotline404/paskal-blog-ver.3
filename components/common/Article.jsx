@@ -9,7 +9,7 @@ function Article({ data }) {
     <div>
       {!items ? (
         items.map((item) => {
-          return <div>{item.paragraph.rich_text[0]}</div>;
+          console.log("debug in item", item);
         })
       ) : (
         <div>Loading...</div>
