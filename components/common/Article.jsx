@@ -15,11 +15,11 @@ function Article({ data }) {
 
 
 
-  console.log("items", items);
+  console.log("blocks", blocks);
   return (
     <div>
-      {items ? (
-        items.map((item) => {
+      {blocks ? (
+        blocks.map((item) => {
           console.log("debug in item", item);
         })
       ) : (
