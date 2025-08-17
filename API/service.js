@@ -52,16 +52,7 @@ exports.getPost = async function (page_id) {
   console.log("results in getPost notion api", results)
 
   return results;
-
-  // results.forEach((result) => {
-
-  //   if (result.type === 'paragraph') {
-  //     console.log("arr paragraph", result.paragraph.rich_text)
-  //   } else if ( result.type === 'image') {
-  //     console.log('arr image',result.image.file )
-  //   }
-
-  // });
+  
 };
 
 

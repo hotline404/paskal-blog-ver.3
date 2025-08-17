@@ -2,6 +2,8 @@
 import React from 'react'
 
 function Article({ data }) {
+
+  console.log("data in Article", data);
   return (
     <div>
       {data ? data.map((item) => {
