@@ -13,7 +13,7 @@ function Article({ data }) {
 
   }, [setBlocks]);
 
-  console.log("blocks", blocks[11].image.file.url);
+  console.log("blocks", blocks[11]);
   return (
     <div>
       {blocks ? (
@@ -25,7 +25,7 @@ function Article({ data }) {
               );
             case "image":
               return (
-                <img src={l} alt="포스트 이미지" />
+                <img src={item.image.file.url} alt="포스트 이미지" />
               )
           }
         })
