@@ -5,16 +5,14 @@ function Article({ data }) {
   const [blocks, setBlocks] = useState([]);
 
   useEffect(() => {
-    const items = data.then((items) => {
-      console.log("items", items)
+    data.then((items) => {
+      console.log("items", items);
+      setBlocks([items]);
       return items;
     });
-    setBlocks([items]);
 
-    console.log("blocks, in the Article", blocks);
-  }, [data]);
-
-
+    console.log("blocks, in the Article", items);
+  }, [setBlocks]);
 
   console.log("blocks", blocks);
   return (
