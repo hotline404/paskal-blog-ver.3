@@ -3,10 +3,10 @@ import React from 'react'
 
 function Article({ data }) {
 
-  data.then(item => console.log("item in Article", item));
+  const items = data.then(items => {return items});
   return (
     <div>
-      {data ? data.map((item) => {
+      {items ? items.map((item) => {
         if (item.type === 'paragraph') {
           return (
             <p>{item.paragraph.rich_text[0]}</p>
