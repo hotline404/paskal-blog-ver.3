@@ -19,7 +19,7 @@ function Article({ data }) {
       {blocks ? (
         blocks?.map((item) => {
           switch (item.type) {
-            case "paragraph":
+            default:
               return (
                 <p>{item.paragraph.rich_text[0].text.content}</p>
               );
