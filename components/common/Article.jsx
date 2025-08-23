@@ -20,9 +20,7 @@ function Article({ data }) {
         blocks?.map((item) => {
           switch (item.type) {
             default:
-              return (
-                <p>{item.paragraph.rich_text[0].text.content}</p>
-              );
+              console.log("debug in return ", item.paragraph.rich_text[0].text.content)
             case "image":
               return (
                 <img src={item.image.file.url} alt="포스트 이미지" />
