@@ -25,7 +25,7 @@ function Post({ params }) {
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
       <div className="bg-[#FAF4E6] p-6 rounded-xl outline-[#31302B] outline-[5px] w-[80%] h-[80%]">
         <h2 className='italic'>/* P O S T   P A G E */</h2>
-        <div className="h-screen">
+        <div className="h-full">
           <Article data={result}/>
         </div>
         <BackButton className="italic mt-4 text-sm text-gray-500 hover:cursor-pointer">
