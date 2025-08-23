@@ -24,11 +24,11 @@ function Post({ params }) {
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-xl">
-        <h2>* P O S T   P A G E *</h2>
-        <div>
+        <h2 className='italic'>/* P O S T   P A G E */</h2>
+        <div className="bg-gray-500 ">
           <Article data={result}/>
         </div>
-        <BackButton className="mt-4 text-sm text-gray-500 hover:cursor-pointer">
+        <BackButton className="italic mt-4 text-sm text-gray-500 hover:cursor-pointer">
           C L O S E
         </BackButton>
       </div>
