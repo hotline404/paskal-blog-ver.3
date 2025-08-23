@@ -15,7 +15,7 @@ function Article({ data }) {
 
   console.log("block", blocks);
   return (
-    <div className="h-full">
+    <div className="h-[100%]">
       {blocks ? (
         blocks?.map((item) => {
           switch (item.type) {
