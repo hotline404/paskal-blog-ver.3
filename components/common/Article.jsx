@@ -13,20 +13,20 @@ function Article({ data }) {
 
   }, [setBlocks]);
 
-  console.log("block", blocks[0]);
+  console.log("block", blocks);
   return (
     <div>
       {blocks ? (
         blocks?.map((item) => {
           switch (item.type) {
-            default:
-              return (
-                <p>{item.paragraph.rich_text[0].text.content}</p>
-              );
             case "image":
               return (
                 <img src={item.image.file.url} alt="포스트 이미지" />
               )
+              default:
+                return (
+                  <p>{item.paragraph.rich_text[0].text.content}</p>
+                );
           }
         })
       ) : (
