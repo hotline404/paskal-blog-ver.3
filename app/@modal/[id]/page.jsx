@@ -23,7 +23,7 @@ function Post({ params }) {
   
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-xl">
+      <div className="bg-white p-6 rounded-xl outline-[#31302B] outline-[5px]">
         <h2 className='italic'>/* P O S T   P A G E */</h2>
         <div className="bg-gray-500 ">
           <Article data={result}/>
