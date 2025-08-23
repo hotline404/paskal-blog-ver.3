@@ -25,7 +25,7 @@ function Article({ data }) {
               )
               default:
                 return (
-                  <p>{item.paragraph.rich_text ? item.paragraph.rich_text[0].text.content : ""}</p>
+                  <p>{(item.paragraph.rich_text.length === 0) ? "" : item.paragraph.rich_text[0].text.content}</p>
                 );
           }
         })
