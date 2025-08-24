@@ -10,7 +10,6 @@ function Article({ data }) {
       setBlocks(items);
       return items;
     });
-
   }, [setBlocks]);
 
   console.log("block", blocks);
@@ -19,14 +18,23 @@ function Article({ data }) {
       {blocks ? (
         blocks?.map((item) => {
           switch (item.type) {
-            case "image":
+            case "numbered_list_item":
               return (
-                <img src={item.image.file.url} alt="포스트 이미지" />
-              )
-              default:
-                return (
-                  <p>{(item.paragraph.rich_text.length === 0) ? "" : item.paragraph.rich_text[0].text.content}</p>
-                );
+                <p>
+                  {item.paragraph.numbered_list_item.rich_text[0].text.content}
+                </p>
+              );
+
+            case "image":
+              return <img src={item.image.file.url} alt="포스트 이미지" />;
+            default:
+              return (
+                <p>
+                  {item.paragraph.rich_text.length === 0
+                    ? ""
+                    : item.paragraph.rich_text[0].text.content}
+                </p>
+              );
           }
         })
       ) : (
