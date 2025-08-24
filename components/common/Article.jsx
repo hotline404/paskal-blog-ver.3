@@ -13,7 +13,7 @@ function Article({ data }) {
 
   return (
     <div className="h-[100%] text-lg overflow-auto">
-      {blocks ? (
+      {blocks !== undefined ? (
         blocks?.map((item) => {
           switch (item.type) {
             case "heading_2": 
