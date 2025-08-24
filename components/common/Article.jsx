@@ -6,13 +6,11 @@ function Article({ data }) {
 
   useEffect(() => {
     data.then((items) => {
-      console.log("items", items);
       setBlocks(items);
       return items;
     });
   }, [setBlocks]);
 
-  console.log("block", blocks);
   return (
     <div className="h-[100%] text-lg overflow-auto">
       {blocks ? (
