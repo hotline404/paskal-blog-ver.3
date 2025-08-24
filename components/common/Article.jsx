@@ -33,7 +33,7 @@ function Article({ data }) {
               return (
                 <p>
                   {item.paragraph.rich_text.length === 0
-                    ? <hr></hr>
+                    ? <br></br>
                     : item.paragraph.rich_text[0].text.content}
                 </p>
               );
