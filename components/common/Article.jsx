@@ -20,7 +20,7 @@ function Article({ data }) {
           switch (item.type) {
             case "heading_2": 
               return (
-                <h2>{item.heading_2.rich_text[0].text.content}</h2>
+                <h2 className="italic font-bold">{item.heading_2.rich_text[0].text.content}</h2>
               )
             case "numbered_list_item":
               return (
