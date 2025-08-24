@@ -21,7 +21,7 @@ function Article({ data }) {
             case "numbered_list_item":
               return (
                 <p>
-                  {item.paragraph.numbered_list_item.rich_text[0].text.content}
+                  {item.numbered_list_item.rich_text[0].text.content}
                 </p>
               );
 
