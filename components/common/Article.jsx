@@ -15,7 +15,7 @@ function Article({ data }) {
 
   console.log("block", blocks);
   return (
-    <div className="h-[100%] text-lg">
+    <div className="h-[100%] text-lg scroll-auto">
       {blocks ? (
         blocks?.map((item) => {
           switch (item.type) {
