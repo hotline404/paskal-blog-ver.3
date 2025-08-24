@@ -13,7 +13,7 @@ function Article({ data }) {
 
   return (
     <div className="h-[100%] text-lg overflow-auto">
-      {!blocks ? (
+      {blocks ? (
         <div>Loading...</div>
       ) : (
         blocks?.map((item) => {
