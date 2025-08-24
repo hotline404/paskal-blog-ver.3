@@ -15,7 +15,7 @@ function Article({ data }) {
 
   console.log("block", blocks);
   return (
-    <div className="h-[100%] text-lg scroll-auto">
+    <div className="h-[100%] text-lg overflow-auto">
       {blocks ? (
         blocks?.map((item) => {
           switch (item.type) {
