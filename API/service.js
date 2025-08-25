@@ -34,7 +34,7 @@ exports.getNotion = async function () {
     };
   });
 
-  console.log('get notion post : ', post);
+  console.log('get notion post : ', results);
 
   return post;
 };
