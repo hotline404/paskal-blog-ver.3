@@ -9,6 +9,7 @@ const Header = () => {
   //input component 하위에서 캡슐화시켜야 함
   //비즈니스 컴포넌트 분리
   const handleSubmit = (dataForm) => {
+    'use server'
     console.log("handle submit test", dataForm);
   };
   return (
