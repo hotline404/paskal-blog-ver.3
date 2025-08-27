@@ -10,7 +10,9 @@ const Header = () => {
   //비즈니스 컴포넌트 분리
   const handleSubmit = async () => {
     'use server'
-    console.log("handle submit test");
+    const res = await getSearchQuery("fuck");
+    console.log("handle submit test", res);
+    
   };
   return (
     <div className={mixtureStyle.header}>
