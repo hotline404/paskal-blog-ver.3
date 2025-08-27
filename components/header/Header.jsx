@@ -5,8 +5,9 @@ import Input from "../common/Input";
 import Provider from "@/store/Provider";
 import { getSearchQuery } from "@/API/service";
 
-export const handleSubmit = async () => {
+export const handleSubmit = async (formdata) => {
   "use server";
+  const data = formdata.get();
   const res = await getSearchQuery("fuck");
   console.log("handle submit test", res);
 };
