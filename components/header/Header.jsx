@@ -14,14 +14,7 @@ const Header = () => {
       <SearchBox>
         <Provider />
         <form action={submit}>
-          <Input
-            input={{
-              name: "검색",
-              type: "search",
-              id: "search",
-              placeholder: "search...",
-            }}
-          />
+          <input name='검색' type="text" id='search' placeholder="search.." />
           <button type="submit">검색</button>
         </form>
       </SearchBox>
@@ -30,3 +23,12 @@ const Header = () => {
 };
 
 export default Header;
+
+// <Input
+//             input={{
+//               name: "검색",
+//               type: "search",
+//               id: "search",
+//               placeholder: "search...",
+//             }}
+//           />
