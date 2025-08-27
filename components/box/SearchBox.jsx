@@ -1,6 +1,7 @@
 import React from 'react'
 import { mixtureStyle } from '../style/mixture/mixture'
 
+
 function SearchBox(props) {
   return (
     <div className={mixtureStyle.searchBox}>

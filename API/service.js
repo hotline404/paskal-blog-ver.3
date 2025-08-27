@@ -57,7 +57,7 @@ exports.getPost = async function (page_id) {
 exports.getSearchQuery = async function (query) {
   const { results } = await notion.search.query({
     filter: {
-      properties: "title",
+      properties: "Name",
       rich_text: {
         contain: query,
       },
