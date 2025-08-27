@@ -2,10 +2,8 @@ import { mixtureStyle } from "../style/mixture/mixture";
 import TitleBox from "../box/TitleBox";
 import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
-import Provider from "@/store/Provider";
-import { submit } from "../serverAction/submit";
 
-const Header = () => {
+export default function Header () {
   //input component 하위에서 캡슐화시켜야 함
   //비즈니스 컴포넌트 분리
 
@@ -20,7 +18,6 @@ async function submitForm(formData) {
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
-        <Provider />
         <form action={submitForm}>
           <Input
             input={{
@@ -37,7 +34,6 @@ async function submitForm(formData) {
   );
 };
 
-export default Header;
 
 
 // app/page.js
