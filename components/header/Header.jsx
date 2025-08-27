@@ -3,14 +3,8 @@ import TitleBox from "../box/TitleBox";
 import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
 import Provider from "@/store/Provider";
-import { getSearchQuery } from "@/API/service";
+import { submit } from "../serverAction/submit";
 
-export const handleSubmit = async (formdata) => {
-  "use server";
-  const data = formdata.get();
-  const res = await getSearchQuery("fuck");
-  console.log("handle submit test", res);
-};
 const Header = () => {
   //input component 하위에서 캡슐화시켜야 함
   //비즈니스 컴포넌트 분리
@@ -19,7 +13,7 @@ const Header = () => {
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
         <Provider />
-        <form action={handleSubmit}>
+        <form action={submit}>
           <Input
             input={{
               name: "검색",
