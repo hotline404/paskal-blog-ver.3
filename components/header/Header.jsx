@@ -5,7 +5,7 @@ import Input from "../common/Input";
 import Provider from "@/store/Provider";
 import { getSearchQuery } from "@/API/service";
 
-const handleSubmit = async () => {
+export const handleSubmit = async () => {
   "use server";
   const res = await getSearchQuery("fuck");
   console.log("handle submit test", res);
