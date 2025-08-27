@@ -8,13 +8,31 @@ import { submit } from "../serverAction/submit";
 const Header = () => {
   //input component 하위에서 캡슐화시켜야 함
   //비즈니스 컴포넌트 분리
+
+  async function submitform(formData) {
+    "use server";
+    try {
+      const data = formData.get("검색");
+      console.log("handle submit test", data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
         <Provider />
-        <form action={submit}>
-          <input name='검색' type="text" id='search' placeholder="search.." />
+        <form action={submitform}>
+          <Input
+            input={{
+              name: "검색",
+              type: "search",
+              id: "search",
+              placeholder: "search...",
+            }}
+          />
           <button type="submit">검색</button>
         </form>
       </SearchBox>
@@ -23,12 +41,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// <Input
-//             input={{
-//               name: "검색",
-//               type: "search",
-//               id: "search",
-//               placeholder: "search...",
-//             }}
-//           />

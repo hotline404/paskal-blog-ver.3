@@ -1,10 +1,9 @@
 "use server";
 import { getSearchQuery } from "@/API/service";
-async function submit (formdata) {
+async function submit (formData) {
   try {
-    const data = formdata.get('검색');
-    const res = await getSearchQuery("fuck");
-    console.log("handle submit test", res);
+    const data = formData.get('검색');
+    console.log("handle submit test", data);
   } catch (error) {
     console.error(error);
   }
