@@ -27,7 +27,7 @@ async function submitForm(formData) {
               placeholder: "search...",
             }}
           />
-          <button type="submit">검색</button>
+          <button className="hidden" type="submit">검색</button>
         </form>
       </SearchBox>
     </div>
