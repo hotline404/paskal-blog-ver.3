@@ -47,7 +47,7 @@ import Input from "../common/Input";
 export default function Header() {
   async function submitForm(formData) {
     'use server'; // Marks this function as a Server Action
-    const name = formData.get('name');
+    const name = formData.get('검색');
     // Process data on the server, e.g., save to database
     console.log('Submitted name:', name);
   }
@@ -56,7 +56,7 @@ export default function Header() {
     <form action={submitForm}>
       <Input
             input={{
-              name: "name",
+              name: "검색",
               type: "search",
               id: "search",
               placeholder: "search...",
