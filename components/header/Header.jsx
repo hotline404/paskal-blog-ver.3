@@ -18,7 +18,7 @@ async function submitForm(formData) {
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
-        <form className="w-[100%] " action={submitForm}>
+        <form className="w-[100%] flex justify-end" action={submitForm}>
           <Input
             input={{
               name: "검색",
