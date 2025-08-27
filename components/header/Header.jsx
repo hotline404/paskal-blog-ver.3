@@ -1,7 +1,7 @@
 // import { mixtureStyle } from "../style/mixture/mixture";
 // import TitleBox from "../box/TitleBox";
 // import SearchBox from "../box/SearchBox";
-// import Input from "../common/Input";
+import Input from "../common/Input";
 // import Provider from "@/store/Provider";
 // import { submit } from "../serverAction/submit";
 
@@ -54,7 +54,14 @@ export default function Header() {
 
   return (
     <form action={submitForm}>
-      <input type="text" name="name" />
+      <Input
+            input={{
+              name: "name",
+              type: "search",
+              id: "search",
+              placeholder: "search...",
+            }}
+          />
       <button type="submit">Submit</button>
     </form>
   );
