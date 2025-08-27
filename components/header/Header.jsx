@@ -8,9 +8,9 @@ import { getSearchQuery } from "@/API/service";
 const Header = () => {
   //input component 하위에서 캡슐화시켜야 함
   //비즈니스 컴포넌트 분리
-  const handleSubmit = async (dataForm) => {
+  const handleSubmit = async () => {
     'use server'
-    console.log("handle submit test", dataForm);
+    console.log("handle submit test");
   };
   return (
     <div className={mixtureStyle.header}>
