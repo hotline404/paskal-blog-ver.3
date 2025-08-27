@@ -23,7 +23,6 @@ const Header = () => {
               type: "search",
               id: "search",
               placeholder: "search...",
-              require: "required",
             }}
           />
           <button type="submit">검색</button>
