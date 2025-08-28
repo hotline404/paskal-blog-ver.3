@@ -12,9 +12,11 @@ export default function Header() {
 
   const [state, formAction] = useFormState(submitForm, "");
 
-  // useEffect(() => {
-  //   console.log("state is ", state)
-  // }, [fromState])
+  useEffect(() => {
+    if (state) {
+      console.log("state is ", state)
+    }
+  }, [state])
 
 
   return (
