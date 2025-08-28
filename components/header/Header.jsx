@@ -4,18 +4,21 @@ import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
 import { getSearchQuery } from "@/API/service";
 
-export default function Header () {
+export default function Header() {
   //input component 하위에서 캡슐화시켜야 함
   //비즈니스 컴포넌트 분리
 
-async function submitForm(formData) {
-    'use server'; // Marks this function as a Server Action
-    const query = formData.get('검색');
+  async function submitForm(formData) {
+    "use server"; // Marks this function as a Server Action
+    const query = formData.get("검색");
     // Process data on the server, e.g., save to database
-    console.log('Submitted query is', query);
-
-    const res = await getSearchQuery(query);
-    console.log("search api res is ", res);
+    console.log("Submitted query is", query);
+    try {
+      const res = await getSearchQuery(query);
+      console.log("search api res is ", res);
+    } catch (err) {
+      console.error("error is ", err);
+    }
   }
 
   return (
@@ -31,14 +34,14 @@ async function submitForm(formData) {
               placeholder: "search...",
             }}
           />
-          <button className="hidden" type="submit">검색</button>
+          <button className="hidden" type="submit">
+            검색
+          </button>
         </form>
       </SearchBox>
     </div>
   );
-};
-
-
+}
 
 // app/page.js
 // export default function Header() {
