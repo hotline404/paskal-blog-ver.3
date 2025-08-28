@@ -2,6 +2,7 @@ import { mixtureStyle } from "../style/mixture/mixture";
 import TitleBox from "../box/TitleBox";
 import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
+import { getSearchQuery } from "@/API/service";
 
 export default function Header () {
   //input component 하위에서 캡슐화시켜야 함
@@ -9,9 +10,12 @@ export default function Header () {
 
 async function submitForm(formData) {
     'use server'; // Marks this function as a Server Action
-    const name = formData.get('검색');
+    const query = formData.get('검색');
     // Process data on the server, e.g., save to database
-    console.log('Submitted name:', name);
+    console.log('Submitted query is', query);
+
+    const res = await getSearchQuery(query);
+    console.log("search api res is ", res);
   }
 
   return (
