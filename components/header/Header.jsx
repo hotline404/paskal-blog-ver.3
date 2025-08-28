@@ -4,13 +4,13 @@ import TitleBox from "../box/TitleBox";
 import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
 import submitForm from "../serverAction/submitForm";
-import { useFormState } from "react-dom";
+import { useActionState } from "react";
 import { useEffect } from "react";
 
 
 export default function Header() {
 
-  const [state, formAction] = useFormState(submitForm, "zzz");
+  const [state, formAction] = useActionState(submitForm, "zzz");
 
   useEffect(() => {
     if (state) {
