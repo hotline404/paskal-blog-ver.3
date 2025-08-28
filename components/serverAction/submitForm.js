@@ -10,6 +10,7 @@ async function submitForm(formData) {
     return res;
   } catch (err) {
     console.error("error is ", err);
+    return "검색 실패"
   }
 }
 

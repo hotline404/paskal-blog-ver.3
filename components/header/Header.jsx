@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 export default function Header() {
 
-  const [state, fromState] = useFormState(submitForm, "");
+  const [state, formAction] = useFormState(submitForm, "");
 
   // useEffect(() => {
   //   console.log("state is ", state)
@@ -21,7 +21,7 @@ export default function Header() {
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
-        <form className="w-[100%] flex justify-end" action={fromState}>
+        <form className="w-[100%] flex justify-end" action={formAction}>
           <Input
             input={{
               name: "검색",
