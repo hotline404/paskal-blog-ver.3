@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 export default function Header() {
 
-  const [state, formAction] = useFormState(submitForm, null);
+  const [state, formAction] = useFormState(submitForm, "");
 
   useEffect(() => {
     if (state) {
