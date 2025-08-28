@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 export default function Header() {
 
-  const [state, fromState] = useFormState(submitForm, null);
+  const [state, fromState] = useFormState(submitForm, "");
 
   // useEffect(() => {
   //   console.log("state is ", state)
