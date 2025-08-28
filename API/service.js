@@ -1,3 +1,4 @@
+const { Qwigley } = require("next/font/google/index.js");
 const {
   notion_key,
   notion_DB,
@@ -55,14 +56,12 @@ exports.getPost = async function (page_id) {
 
 // 제목 검색
 exports.getSearchQuery = async function (query) {
-  const { results } = await notion.search.query({
-    filter: {
-      properties: "Name",
-      rich_text: {
-        contain: query,
-      },
-    },
+  const { results } = await notion.search({
+    query: query,
+    
   });
 
   return results;
 };
+
+
