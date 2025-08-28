@@ -5,13 +5,17 @@ import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
 import submitForm from "../serverAction/submitForm";
 import { useFormState } from "react-dom";
+import { useEffect } from "react";
 
 const initFormState = null
 
 export default function Header() {
 
   const [state, fromState] = useFormState(submitForm, initFormState);
-  console.log('form state is ', state.then(data => {return data}));
+
+  useEffect(() => {
+    console.log("state is ", state)
+  }, [fromState])
 
   // async function submitForm(formData) {
   //   "use server";
