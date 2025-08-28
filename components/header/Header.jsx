@@ -1,31 +1,37 @@
+"use client";
 import { mixtureStyle } from "../style/mixture/mixture";
 import TitleBox from "../box/TitleBox";
 import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
-import { getSearchQuery } from "@/API/service";
+import submitForm from "../serverAction/submitForm";
+import { useFormState } from "react-dom";
+
+const initFormState = null
 
 export default function Header() {
-  //input component 하위에서 캡슐화시켜야 함
-  //비즈니스 컴포넌트 분리
 
-  async function submitForm(formData) {
-    "use server"; // Marks this function as a Server Action
-    const query = formData.get("검색");
-    // Process data on the server, e.g., save to database
-    console.log("Submitted query is", query);
-    try {
-      const res = await getSearchQuery(query);
-      console.log("search api res is ", res);
-    } catch (err) {
-      console.error("error is ", err);
-    }
-  }
+  const [state, fromState] = useFormState(submitForm, initFormState);
+  console.log('form state is ', state);
+
+  // async function submitForm(formData) {
+  //   "use server";
+  //   const query = formData.get("검색");
+
+  //   console.log("Submitted query is", query);
+  //   try {
+  //     const res = await getSearchQuery(query);
+  //     console.log("search api res is ", res);
+  //     return res
+  //   } catch (err) {
+  //     console.error("error is ", err);
+  //   }
+  // }
 
   return (
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
-        <form className="w-[100%] flex justify-end" action={submitForm}>
+        <form className="w-[100%] flex justify-end" action={fromState}>
           <Input
             input={{
               name: "검색",
@@ -42,27 +48,3 @@ export default function Header() {
     </div>
   );
 }
-
-// app/page.js
-// export default function Header() {
-//   async function submitForm(formData) {
-//     'use server'; // Marks this function as a Server Action
-//     const name = formData.get('검색');
-//     // Process data on the server, e.g., save to database
-//     console.log('Submitted name:', name);
-//   }
-
-//   return (
-//     <form action={submitForm}>
-//       <Input
-//             input={{
-//               name: "검색",
-//               type: "search",
-//               id: "search",
-//               placeholder: "search...",
-//             }}
-//           />
-//       <button type="submit">Submit</button>
-//     </form>
-//   );
-// }
