@@ -2,6 +2,7 @@
 import { getSearchQuery } from "@/API/service";
 async function submitForm(formData) {
   const query = formData.get("검색");
+  console.log("뭔 에러야 이거 시발", formData)
 
   console.log("Submitted query is", query);
   try {
