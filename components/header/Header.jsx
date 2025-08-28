@@ -11,7 +11,7 @@ const initFormState = null
 export default function Header() {
 
   const [state, fromState] = useFormState(submitForm, initFormState);
-  console.log('form state is ', state);
+  console.log('form state is ', state.then(data => {return data}));
 
   // async function submitForm(formData) {
   //   "use server";
