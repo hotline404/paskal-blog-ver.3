@@ -7,22 +7,21 @@ import submitForm from "../serverAction/submitForm";
 import { useFormState } from "react-dom";
 import { useEffect } from "react";
 
-const initFormState = null
 
 export default function Header() {
 
-  // const [state, fromState] = useFormState(submitForm, initFormState);
+  const [state, fromState] = useFormState(submitForm, null);
 
   // useEffect(() => {
   //   console.log("state is ", state)
   // }, [fromState])
-  
+
 
   return (
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
-        <form className="w-[100%] flex justify-end" action={submitForm}>
+        <form className="w-[100%] flex justify-end" action={fromState}>
           <Input
             input={{
               name: "검색",
