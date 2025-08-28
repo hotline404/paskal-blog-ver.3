@@ -11,31 +11,18 @@ const initFormState = null
 
 export default function Header() {
 
-  const [state, fromState] = useFormState(submitForm, initFormState);
+  // const [state, fromState] = useFormState(submitForm, initFormState);
 
-  useEffect(() => {
-    console.log("state is ", state)
-  }, [fromState])
-
-  // async function submitForm(formData) {
-  //   "use server";
-  //   const query = formData.get("검색");
-
-  //   console.log("Submitted query is", query);
-  //   try {
-  //     const res = await getSearchQuery(query);
-  //     console.log("search api res is ", res);
-  //     return res
-  //   } catch (err) {
-  //     console.error("error is ", err);
-  //   }
-  // }
+  // useEffect(() => {
+  //   console.log("state is ", state)
+  // }, [fromState])
+  
 
   return (
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
-        <form className="w-[100%] flex justify-end" action={fromState}>
+        <form className="w-[100%] flex justify-end" action={submitForm}>
           <Input
             input={{
               name: "검색",
