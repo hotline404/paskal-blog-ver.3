@@ -16,6 +16,7 @@ export default function Header() {
 
   async function useFormState (query) {
     const res = await submitForm(query)
+    console.log("useForm", res);
     setSearchedData(res);
   }
 

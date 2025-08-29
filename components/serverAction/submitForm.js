@@ -6,7 +6,6 @@ async function submitForm(formData) {
   console.log("Submitted query is", query);
   try {
     const res = await getSearchQuery(query);
-    console.log("search api res is ", res);
     return res;
   } catch (err) {
     console.error("error is ", err);
