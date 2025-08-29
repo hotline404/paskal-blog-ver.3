@@ -6,19 +6,22 @@ import Input from "../common/Input";
 import submitForm from "../serverAction/submitForm";
 import { useState } from "react";
 import { useEffect } from "react";
+import useStore from "@/store/state";
+
 
 
 export default function Header() {
-  const [state, setState] = useState('');
+  const {setSearchedData} = useStore(state => state.setSearchedData);
+  const { initialData } = useStore(state => state.initialData)
 
   async function useFormState (query) {
     const res = await submitForm(query)
-    setState(res);
+    setSearchedData(res);
   }
 
   useEffect(() => {
-    console.log('state is ', state);
-  }, [state])
+    console.log('state is ', initialData);
+  }, [initialData])
 
 
   return (
