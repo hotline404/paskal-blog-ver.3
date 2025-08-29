@@ -11,8 +11,8 @@ import useStore from "@/store/state";
 
 
 export default function Header() {
-  const {setSearchedData} = useStore(state => state.setSearchedData);
-  const { initialData } = useStore(state => state.initialData)
+  const {setSearchedData} = useStore();
+  //const { initialData } = useStore()
 
   async function useFormState (query) {
     const res = await submitForm(query)
@@ -20,9 +20,9 @@ export default function Header() {
     setSearchedData(res);
   }
 
-  useEffect(() => {
-    console.log('state is ', initialData);
-  }, [initialData])
+  // useEffect(() => {
+  //   console.log('state is ', initialData);
+  // }, [setSearchedData])
 
 
   return (
