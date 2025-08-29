@@ -15,9 +15,10 @@ export default function Header() {
     const res = await submitForm(query)
     setState(res);
   }
+
   useEffect(() => {
-    console.log(state);
-  }, [setState])
+    console.log('state is ', state);
+  }, [state])
 
 
   return (
