@@ -35,7 +35,7 @@ exports.getNotion = async function () {
     };
   });
 
-  console.log('get notion post : ', results);
+  console.log("get notion post : ", results);
 
   return post;
 };
@@ -58,10 +58,16 @@ exports.getPost = async function (page_id) {
 exports.getSearchQuery = async function (query) {
   const { results } = await notion.search({
     query: query,
-    
+  });
+  const post = results.map((page) => {
+    return {
+      id: page.id,
+      title: page.properties.Name.title[0].text.content,
+      date: page.properties.date,
+      allProperties: page.properties,
+      icon: page.icon.emoji,
+    };
   });
 
-  return results;
+  return post;
 };
-
-
