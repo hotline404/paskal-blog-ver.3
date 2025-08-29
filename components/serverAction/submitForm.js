@@ -1,5 +1,5 @@
 "use server";
-import { getSearchQuery } from "@/API/service";
+import { getSearchQuery, getNotion } from "@/API/service";
 async function submitForm(formData) {
   const query = formData.get("검색");
 
@@ -9,7 +9,8 @@ async function submitForm(formData) {
     return res;
   } catch (err) {
     console.error("error is ", err);
-    return "검색 실패"
+    const res = await getNotion();
+    return res;
   }
 }
 
