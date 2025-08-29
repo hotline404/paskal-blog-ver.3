@@ -30,7 +30,7 @@ function Article({ data }) {
             case "image":
               return (
                 <img
-                  className="h-80 w-100 object-cover"
+                  className="h-80 w-100 object-contain"
                   src={item.image.file.url}
                   alt="포스트 이미지"
                 />
