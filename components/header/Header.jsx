@@ -4,26 +4,27 @@ import TitleBox from "../box/TitleBox";
 import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
 import submitForm from "../serverAction/submitForm";
-import { useActionState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 
 
 export default function Header() {
+  const [state, setState] = useState('');
 
-  const [state, formAction] = useActionState(submitForm, "zzz");
-
+  async function useFormState (query) {
+    const res = await submitForm(query)
+    setState(res);
+  }
   useEffect(() => {
-    if (state) {
-      console.log("state is ", state)
-    }
-  }, [state])
+    console.log(state);
+  }, [setState])
 
 
   return (
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
-        <form className="w-[100%] flex justify-end" action={formAction}>
+        <form className="w-[100%] flex justify-end" action={useFormState}>
           <Input
             input={{
               name: "검색",
