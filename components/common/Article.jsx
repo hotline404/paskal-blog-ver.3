@@ -20,7 +20,7 @@ function Article({ data }) {
           switch (item.type) {
             case "heading_2":
               return (
-                <h2 className="italic font-bold">
+                <h2 className="italic font-bold text-blue-950">
                   {`> ${item.heading_2.rich_text[0].text.content}`}
                 </h2>
               );
