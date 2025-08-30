@@ -16,7 +16,6 @@ export default function Header() {
     setSearchedData(res);
   }
 
-
   return (
     <div className={mixtureStyle.header}>
       <TitleBox>* P a s k a l *</TitleBox>

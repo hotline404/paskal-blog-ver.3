@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { mixtureStyle } from "../style/mixture/mixture";
 import { useRouter } from "next/navigation";
@@ -8,13 +8,9 @@ import { useRouter } from "next/navigation";
 //클라이언트
 function List(props) {
   const router = useRouter();
-  
-  
 
   const onClickHandler = (id) => {
     router.push(`/${id}`);
-
-
   };
 
   return (
