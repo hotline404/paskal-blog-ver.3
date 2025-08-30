@@ -2,13 +2,13 @@
 //step 2 return box ✅
 //step 3 button back ✅
 //step 4 make components
-// step 4-1 common info (name, email, github)
+// step 4-1 common info (name, email, github) 
 // step 4-2 skill img (list > img)
 // step 4-3 primary project list with link
 // step 4-4 sns link list with link
 // step 4-5 ...
-//step 5 import components
-//step 6 style components
+//step 5 import components ✅
+//step 6 style components 
 import React from "react";
 import BackButton from "@/components/Button/BackButton";
 import CommonInfo from "./components/CommonInfo";
@@ -16,6 +16,8 @@ import ProjectList from "./components/ProjectList";
 import SkillInfo from "./components/SkillInfo";
 import SnsList from "./components/SnsList";
 import { getInfo } from "@/API/service";
+
+export const dynamic = "force-dynamic";
 
 function page() {
   getInfo().then(data => console.log('info', data));
