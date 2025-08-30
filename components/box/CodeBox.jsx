@@ -1,12 +1,12 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 
 function CodeBox(props) {
   return (
-    <div className="bg-gray-600 text-orange-500 clear-left px-0.5 rounded-[6px] w-[50%]">
-      <p className='italic m-2 tracking-wider'>{props.code}</p>
-    </div>
-  )
+    <span className="bg-gray-600 text-orange-500 clear-left px-0.5 rounded-[6px] w-[50%] italic m-2 tracking-wider">
+      {props.code}
+    </span>
+  );
 }
 
-export default CodeBox
+export default CodeBox;
