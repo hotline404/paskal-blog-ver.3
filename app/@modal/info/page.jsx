@@ -19,7 +19,7 @@ import { getInfo } from "@/API/service";
 
 export const dynamic = "force-dynamic";
 
-function page() {
+function Info() {
   getInfo().then(data => console.log('info', data));
   
   return (
@@ -38,4 +38,4 @@ function page() {
   );
 }
 
-export default page;
+export default Info;
