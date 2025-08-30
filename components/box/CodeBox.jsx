@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 
-function CodeBox(code) {
+function CodeBox(props) {
   return (
     <div className="bg-cyan-300 clear-left w-[100%]">
-      <p>{code}</p>
+      <p>{props.code}</p>
     </div>
   )
 }
