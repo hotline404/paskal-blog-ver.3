@@ -35,6 +35,9 @@ function Article({ data }) {
                   alt="포스트 이미지"
                 />
               );
+
+              case "code":
+                return <p>{item.code.rich_text[0].text.content}</p>;
             default:
               return (
                 <p>
