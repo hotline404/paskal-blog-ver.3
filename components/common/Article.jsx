@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import CodeBox from "../box/CodeBox";
 
 function Article({ data }) {
   const [blocks, setBlocks] = useState([]);
@@ -37,7 +38,7 @@ function Article({ data }) {
               );
 
               case "code":
-                return <p>{item.code.rich_text[0].text.content}</p>;
+                return <CodeBox code={item.code.rich_text[0].text.content}/>;
             default:
               return (
                 <p>
