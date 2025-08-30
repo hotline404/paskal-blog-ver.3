@@ -11,10 +11,10 @@
 //step 6 style components 
 import React from "react";
 import BackButton from "@/components/Button/BackButton";
-import CommonInfo from "./components/CommonInfo";
-import ProjectList from "./components/ProjectList";
-import SkillInfo from "./components/SkillInfo";
-import SnsList from "./components/SnsList";
+import CommonInfo from "../../../components/info/CommonInfo";
+import ProjectList from "../../../components/info/ProjectList";
+import SkillInfo from "../../../components/info/SkillInfo";
+import SnsList from "../../../components/info/SnsList";
 import { getInfo } from "@/API/service";
 
 export const dynamic = "force-dynamic";
