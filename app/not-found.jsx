@@ -2,8 +2,8 @@ import React from 'react'
 
 function NotFound() {
   return (
-    <div>
-      404
+    <div className='italic font-bold text-orange-500 bg-black justify-center items-center text-7xl'>
+      404 not found
     </div>
   )
 }
