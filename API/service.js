@@ -49,7 +49,7 @@ exports.getPost = async function (page_id) {
     page_size: 70,
   });
 
-  console.log("results in getPost notion api", results);
+  console.log("results in getPost notion api", results[0].code.rich_text);
 
   return results;
 };
