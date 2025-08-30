@@ -4,8 +4,6 @@ import TitleBox from "../box/TitleBox";
 import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
 import submitForm from "../serverAction/submitForm";
-import { useState } from "react";
-import { useEffect } from "react";
 import useStore from "@/store/state";
 
 
@@ -17,7 +15,6 @@ export default function Header() {
     const res = await submitForm(query)
     setSearchedData(res);
   }
-
 
   return (
     <div className={mixtureStyle.header}>

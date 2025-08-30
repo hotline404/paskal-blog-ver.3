@@ -10,16 +10,14 @@ require("dotenv").config();
 
 //page 정보
 export const dynamic = "force-dynamic";
-export const metadata = { title: "* p a s k a l ' s   b l o g *", description: "루트 페이지" };
 
 async function run() {
-
   // notion api 연결 및 디버깅
   try {
     const res = await getNotion();
     return res;
   } catch (error) {
-    console.log("get error", error);
+    console.error("get error", error);
   }
 }
 
