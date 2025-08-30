@@ -3,7 +3,7 @@ import React from 'react'
 
 function CodeBox(props) {
   return (
-    <div className="bg-cyan-300 clear-left w-[80%] px-0.5 rounded-2xl">
+    <div className="bg-cyan-300 clear-left px-0.5 rounded-3xl">
       <p className='italic mx-2'>{props.code}</p>
     </div>
   )
