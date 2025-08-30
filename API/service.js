@@ -1,9 +1,6 @@
-const { Qwigley } = require("next/font/google/index.js");
 const {
   notion_key,
   notion_DB,
-  notion_token_v2,
-  notion_user_id,
 } = require("./instance.js");
 const { Client } = require("@notionhq/client");
 
@@ -12,11 +9,9 @@ const notion = new Client({
   request_timeout: 100000,
 });
 
-const db_id = notion_DB;
-
 exports.getNotion = async function () {
   const { results } = await notion.databases.query({
-    database_id: db_id,
+    database_id: notion_DB,
     filter: {
       property: "상태",
       status: {
@@ -39,9 +34,6 @@ exports.getNotion = async function () {
 
   return post;
 };
-
-// paragraph 일 때, image일 때 나눠서 map 리턴 값으로 div와 image태그로 보이게 하기
-// 다음 릴리즈에서는 annotations에서 볼드랑 코드 true일 때 스타일 다르게 해서 div에 넣기
 
 exports.getPost = async function (page_id) {
   const { results } = await notion.blocks.children.list({
