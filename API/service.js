@@ -74,6 +74,6 @@ exports.getInfo = async function () {
       },
     },
   });
-
+  console.log('reat', results)
   return results;
 };
