@@ -75,5 +75,6 @@ exports.getInfo = async function () {
     // },
   });
   console.log('reat', results[2].properties.category)
+  console.log('asdfasdf', results[2].properties.상태)
   return results;
 };
