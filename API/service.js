@@ -74,6 +74,13 @@ exports.getInfo = async function () {
       },
     },
   });
-  console.log('reat', results)
-  return results;
+
+  const infomations = results.map((info) => {
+    return {
+      key : info.properties.Name.title[0].text.content,
+      value : info.properties.info_data
+    }
+  })
+
+  return infomations;
 };
