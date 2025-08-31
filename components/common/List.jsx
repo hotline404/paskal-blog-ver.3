@@ -10,7 +10,7 @@ function List(props) {
   const router = useRouter();
 
   const onClickHandler = (id) => {
-    router.push(`/${id}`);
+    router.push(`/post/${id}`);
   };
 
   return (
