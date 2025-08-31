@@ -26,7 +26,7 @@ function Info() {
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
       <img
         className="h-80 w-100 object-contain"
-        src="../../../public/my-notion-face-portrait.png"
+        src="/my-notion-face-portrait.png"
         alt="me-image"
       />
       <CommonInfo />
