@@ -5,13 +5,11 @@ import SearchBox from "../box/SearchBox";
 import Input from "../common/Input";
 import submitForm from "../serverAction/submitForm";
 import useStore from "@/store/state";
-import { useRouter } from "next/navigation";
 
 
 
 export default function Header() {
   const {setSearchedData} = useStore();
-  const router = useRouter();
 
   async function useFormState (query) {
     const res = await submitForm(query)
@@ -20,7 +18,7 @@ export default function Header() {
 
   return (
     <div className={mixtureStyle.header}>
-      <TitleBox className="cursor-pointer" onClick={() => {router.push('/info')}}>* P a s k a l *</TitleBox>
+      <TitleBox>* P a s k a l *</TitleBox>
       <SearchBox>
         <form className="w-[100%] flex justify-end" action={useFormState}>
           <Input
