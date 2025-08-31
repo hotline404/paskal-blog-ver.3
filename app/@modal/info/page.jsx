@@ -29,7 +29,7 @@ function Info() {
     }
   }
 
-  tryGet();
+  const res = tryGet();
   
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
@@ -43,6 +43,7 @@ function Info() {
       <SkillInfo />
       <SnsList />
       <BackButton>close</BackButton>
+      <div>{res}</div>
     </div>
   );
 }
