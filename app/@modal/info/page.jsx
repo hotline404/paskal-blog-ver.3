@@ -20,7 +20,16 @@ import { getInfo } from "@/API/service";
 export const dynamic = "force-dynamic";
 
 function Info() {
-  getInfo().then(data => {console.log("asdf", data) })
+  async function tryGet () {
+    try {
+      const res = getInfo();
+      console.log('res', res)
+    } catch (err) {
+      console.error("error", err)
+    }
+  }
+
+  tryGet();
   
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
