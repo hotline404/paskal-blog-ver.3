@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 
-function CommonInfo() {
+function CommonInfo(props) {
   return (
     <div>
-      this is Common info
+      {props.data[0]}
     </div>
   )
 }

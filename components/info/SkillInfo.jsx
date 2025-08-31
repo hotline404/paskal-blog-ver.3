@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SkillInfo() {
+function SkillInfo(props) {
   return (
     <div>
       this is skill info

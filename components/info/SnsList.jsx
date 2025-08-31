@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SnsList() {
+function SnsList(props) {
   return (
     <div>
       this is sns

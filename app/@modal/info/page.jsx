@@ -38,10 +38,10 @@ function Info() {
         src="/my-notion-face-portrait.png"
         alt="me-image"
       />
-      <CommonInfo />
-      <ProjectList />
-      <SkillInfo />
-      <SnsList />
+      <CommonInfo data={res.filter(e => e.key === 'common')}/>
+      <ProjectList data={res}/>
+      <SkillInfo data={res}/>
+      <SnsList data={res}/>
       <BackButton>close</BackButton>
       <div>{res}</div>
     </div>
