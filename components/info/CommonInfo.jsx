@@ -2,7 +2,7 @@
 import React from 'react'
 
 function CommonInfo(props) {
-  console.log('CommonInfo', props.data[0].value);
+  console.log('CommonInfo', props.data.filter((e) => e.key === "common"));
 
   return (
     <div>
