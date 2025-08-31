@@ -1,7 +1,7 @@
 import React from 'react'
 
 function SnsList(props) {
-  console.log('SnsList', props.data?.filter((e) => e.key === "sns"));
+  console.log('SnsList', props.data);
 
   return (
     <div>
