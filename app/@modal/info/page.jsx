@@ -29,8 +29,7 @@ function Info() {
     }
   }
 
-  const res = tryGet();
-  console.log('asdfasdfasdf', res)
+  const res = tryGet().then(data => {return data});
   
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
