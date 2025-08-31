@@ -23,7 +23,7 @@ function Info() {
   async function tryGet () {
     try {
       const res = await getInfo();
-      console.log('res', res)
+      console.log('res', res.filter((e) => e.key === "common"))
     } catch (err) {
       console.error("error", err)
     }
@@ -38,7 +38,7 @@ function Info() {
         src="/my-notion-face-portrait.png"
         alt="me-image"
       />
-      <CommonInfo data={res.filter(e => e.key === 'common')}/>
+      <CommonInfo data={res}/>
       <ProjectList data={res}/>
       <SkillInfo data={res}/>
       <SnsList data={res}/>

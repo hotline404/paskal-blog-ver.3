@@ -4,7 +4,7 @@ import React from 'react'
 function CommonInfo(props) {
   return (
     <div>
-      {props.data[0]}
+      CommonInfo
     </div>
   )
 }
