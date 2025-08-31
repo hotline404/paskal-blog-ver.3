@@ -2,7 +2,7 @@
 import React from 'react'
 
 function ProjectList(props) {
-  console.log('ProjectList', props.data);
+  console.log('ProjectList', props.data.then(data => {return data}));
   return (
     <div>
       ProjectList

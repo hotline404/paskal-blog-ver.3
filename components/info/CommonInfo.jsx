@@ -2,7 +2,7 @@
 import React from 'react'
 
 function CommonInfo(props) {
-  console.log('CommonInfo', props.data);
+  console.log('CommonInfo', props.data.then(data => {return data}));
 
   return (
     <div>
