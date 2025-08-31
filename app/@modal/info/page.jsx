@@ -22,7 +22,7 @@ export const dynamic = "force-dynamic";
 function Info() {
   async function tryGet () {
     try {
-      const res = getInfo();
+      const res = await getInfo();
       console.log('res', res)
     } catch (err) {
       console.error("error", err)
