@@ -78,7 +78,7 @@ exports.getInfo = async function () {
   const infomations = results.map((info) => {
     return {
       key : info.properties.Name.title[0].text.content,
-      value : info.properties.info_data.multi_select
+      value : info.properties.info_data.multi_select[0]
     }
   })
 
