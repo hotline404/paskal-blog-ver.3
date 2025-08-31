@@ -67,14 +67,13 @@ exports.getSearchQuery = async function (query) {
 exports.getInfo = async function () {
   const { results } = await notion.databases.query({
     database_id: notion_DB,
-    // filter: {
-    //   property: "category",
-    //   status: {
-    //     equals: "info",
-    //   },
-    // },
+    filter: {
+      property: "category",
+      select: {
+        equals: "info",
+      },
+    },
   });
-  console.log('reat', results[2].properties.category)
-  console.log('asdfasdf', results[2].properties.상태)
+  console.log('reat', results)
   return results;
 };
