@@ -20,9 +20,8 @@ import { getInfo } from "@/API/service";
 export const dynamic = "force-dynamic";
 
 function Info() {
-  const res = getInfo().then(data => {return data})
-  console.log("fadsfasdfaf", res)
-
+  const res = getInfo().then(data => {console.log("asdf", data) })
+  res
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
       <img
