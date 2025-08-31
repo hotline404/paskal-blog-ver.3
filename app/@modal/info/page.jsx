@@ -23,7 +23,7 @@ function Info() {
   getInfo().then(data => console.log('info', data));
   
   return (
-    <div>
+    <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
       <img
         className="h-80 w-100 object-contain"
         src="../../../public/my-notion-face-portrait.png"
