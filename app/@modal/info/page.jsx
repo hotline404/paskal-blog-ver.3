@@ -30,6 +30,7 @@ function Info() {
   }
 
   const res = tryGet();
+  console.log('asdfasdfasdf', res)
   
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
