@@ -1,9 +1,15 @@
 "use client";
-import React from "react";
+import React, {useState, useEffect} from "react";
+
 
 function SkillInfo({ data }) {
-  const skills = data.then((e) => {return e})
-  console.log("???", skills);
+  const [state, setState] = useState(null)
+  const skills = data.then((e) => setState(e))
+  useEffect(() => {
+  console.log("???", state);
+    
+  }, [state])
+
   return (
     <div>
       {skills?.map((item) => {
