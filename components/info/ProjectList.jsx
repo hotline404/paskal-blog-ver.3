@@ -7,11 +7,11 @@ function ProjectList({ data }) {
     data.then((e) => setState(e))
   }, [state]) 
   return (
-    <div>
+    <span className='flex-col'>
       {state?.projects.map((item, index) => {
         return <a href={`https://github.com/${item}`} target='_blank'>{`project ${index + 1} : ${item}`}</a>
       })}
-    </div>
+    </span>
   )
 }
 
