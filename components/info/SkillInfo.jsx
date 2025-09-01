@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 
-function SkillInfo(props) {
-  const skills = props.data
+function SkillInfo({ data }) {
+  const skills = data.then((e) => {return e})
   console.log("???", skills);
   return (
     <div>
