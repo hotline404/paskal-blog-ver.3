@@ -3,7 +3,7 @@ import React from "react";
 
 function SkillInfo({data}) {
   
-  //console.log("???", data.then((e) => {return e}));
+  console.log("???", data.then((e) => {return e}));
   return (
     <div>
       adsfasdf
@@ -13,4 +13,4 @@ function SkillInfo({data}) {
 
 export default SkillInfo;
 
-//https://img.shields.io/badge/-javascript-red?logo=react
+https://img.shields.io/badge/-javascript-red?logo=react
