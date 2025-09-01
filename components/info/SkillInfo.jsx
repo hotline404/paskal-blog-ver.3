@@ -2,7 +2,7 @@
 import React from 'react'
 
 function SkillInfo(props) {
-  console.log('SkillInfo', props.data[0]);
+  console.log('SkillInfo', props.data);
   return props.data.value ? (
     <div>
       {props.data.value.skills?.map((item) => {
