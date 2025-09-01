@@ -3,12 +3,12 @@ import React, {useState, useEffect} from "react";
 
 
 function SkillInfo({ data }) {
-  const [state, setState] = useState(null)
+  const [state, setState] = useState({})
   const skills = data.then((e) => setState(e))
   useEffect(() => {
   console.log("???", state);
     
-  }, [state])
+  }, [setState])
 
   return (
     <div>
