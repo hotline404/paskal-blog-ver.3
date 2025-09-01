@@ -19,25 +19,25 @@ import { getInfo } from "@/API/service";
 
 export const dynamic = "force-dynamic";
 
-function Info() {
-  async function tryGet () {
-    try {
-      const res = await getInfo();
+async function Info() {
+  // async function tryGet () {
+  //   try {
+  //     const res = await getInfo();
 
-      const trimedRes = {
-        common : res.filter((e) => e.key === "common")[0].value,
-        projects : res.filter((e) => e.key === "projects")[0].value,
-        skills: res.filter((e) => e.key === "skills")[0].value,
-        sns: res.filter((e) => e.key === "sns")[0].value
-      }
+  //     const trimedRes = {
+  //       common : res.filter((e) => e.key === "common")[0].value,
+  //       projects : res.filter((e) => e.key === "projects")[0].value,
+  //       skills: res.filter((e) => e.key === "skills")[0].value,
+  //       sns: res.filter((e) => e.key === "sns")[0].value
+  //     }
 
-      return trimedRes;
-    } catch (err) {
-      console.error("error", err)
-    }
-  }
+  //     return trimedRes;
+  //   } catch (err) {
+  //     console.error("error", err)
+  //   }
+  // }
 
-  const res = tryGet().then((data) => {return data});
+  const res = await getInfo()
 
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
