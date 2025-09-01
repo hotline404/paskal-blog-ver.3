@@ -26,10 +26,10 @@ function Info() {
       console.log('res', res.filter((e) => e.key === "common"))
 
       const trimedRes = {
-        common : res.filter((e) => {e.key === "common"}),
-        projects : res.filter((e) => {e.key === "projects"}),
-        skills: res.filter((e) => {e.key === "skills"}),
-        sns: res.filter((e) => {e.key === "sns"})
+        common : res.filter((e) => e.key === "common"),
+        projects : res.filter((e) => e.key === "projects"),
+        skills: res.filter((e) => e.key === "skills"),
+        sns: res.filter((e) => e.key === "sns")
       }
 
       return trimedRes;
@@ -39,7 +39,7 @@ function Info() {
   }
 
   const res = tryGet().then((data) => console.log("data", data));
-  console.log("try", tryGet());
+
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
       <img
