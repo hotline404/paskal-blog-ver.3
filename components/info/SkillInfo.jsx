@@ -1,11 +1,10 @@
-"use client";
 import React from "react";
 
 function SkillInfo(props) {
   const skills = props.data.then((data) => {
     return data.skills;
   });
-  console.log("fadsf", skills)
+  console.log("???", skills);
   return (
     <div>
       {skills.map((item) => {
