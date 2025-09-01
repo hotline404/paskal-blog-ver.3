@@ -30,7 +30,7 @@ function Info() {
   }
 
   const res = tryGet().then((data) => console.log("data", data));
-  
+  console.log("try", tryGet());
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
       <img
