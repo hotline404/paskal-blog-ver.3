@@ -6,7 +6,7 @@ function SkillInfo({ data, test }) {
   useEffect(() => {
     data.then((e) => setState(e));
     console.log("???", state);
-  }, [setState]);
+  }, [state]);
 
   return (
     <div>
