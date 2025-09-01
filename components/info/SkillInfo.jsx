@@ -6,7 +6,7 @@ function SkillInfo(props) {
     console.log('data', data.skills);
     return data.skills;
   });
-  return props.data.value ? (
+  return skills ? (
     <div>
       {skills?.map((item) => {
         <img
