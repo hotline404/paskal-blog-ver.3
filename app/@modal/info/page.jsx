@@ -37,7 +37,7 @@ async function Info() {
   //   }
   // }
 
-  const res = await getInfo().then((d) => console.log('adsfasdf', d))
+  const res = await getInfo()
 
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
