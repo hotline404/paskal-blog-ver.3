@@ -1,7 +1,7 @@
 'use client'
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 
-function CommonInfo(props) {
+function CommonInfo({ data }) {
   //console.log('CommonInfo', props.data.then((data) => {return data}));
 
   return (

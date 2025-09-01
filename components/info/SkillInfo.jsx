@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 function SkillInfo({ data, test }) {
   const [state, setState] = useState(null);
   useEffect(() => {
-    data.then((e) => setState(e));
+    test.then((e) => setState(e));
     console.log("???", state);
   }, [state]);
 
