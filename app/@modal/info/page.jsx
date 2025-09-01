@@ -23,6 +23,7 @@ function Info() {
   async function tryGet () {
     try {
       const res = await getInfo();
+      console.log('res', res.filter((e) => e.key === "common"))
 
       const trimedRes = {
         common : res.filter((e) => e.key === "common")[0].value,
@@ -37,7 +38,7 @@ function Info() {
     }
   }
 
-  const res = tryGet().then((e) => {return e})
+  const res = tryGet().then((data) => {return data});
 
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
