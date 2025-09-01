@@ -24,6 +24,8 @@ function Info() {
     try {
       const res = await getInfo();
       console.log('res', res.filter((e) => e.key === "common"))
+
+      return res
     } catch (err) {
       console.error("error", err)
     }
