@@ -1,13 +1,23 @@
 'use client'
 import React, {useState, useEffect } from 'react'
 
+
 function CommonInfo({ data }) {
-  //console.log('CommonInfo', props.data.then((data) => {return data}));
+  const [state, setState ] = useState(null);
+
+  useEffect(() => {
+    data.then((e) => {
+      setState(e);
+    })
+    console.log("state common", state)
+  }, [state])
 
   return (
-    <div>
-      CommonInfo
-    </div>
+    <ol>
+      {state?.common.map((item) => {
+        <li id={Math.random()} >{item}</li>
+      })}
+    </ol>
   )
 }
 

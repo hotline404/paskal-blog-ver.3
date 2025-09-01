@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-function SkillInfo({ data, test }) {
+function SkillInfo({ data }) {
   const [state, setState] = useState(null);
   useEffect(() => {
-    test.then((e) => setState(e));
+    data.then((e) => setState(e));
     console.log("???", state);
   }, [state]);
 

@@ -41,14 +41,11 @@ function Info() {
     }
   }
 
-  const res = tryGet().then((data) => {
-    return data;
-  });
-  const testRes = tryGet();
+  const res = tryGet();
 
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
-      <div className="">
+      <div className="flex">
         <img
           className="h-80 w-100 object-contain"
           src="/my-notion-face-portrait.png"
@@ -57,7 +54,7 @@ function Info() {
         <CommonInfo data={res} />
       </div>
       <ProjectList data={res} />
-      <SkillInfo data={res} test={testRes} />
+      <SkillInfo data={res} />
       <SnsList data={res} />
       <BackButton>close</BackButton>
     </div>
