@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 
-function SkillInfo(props) {
-  const res = props.data
-  console.log("???", props.data);
+function SkillInfo({data}) {
+  
+  console.log("???", data);
   return (
     <div>
       {/* {skills?.map((item) => {
