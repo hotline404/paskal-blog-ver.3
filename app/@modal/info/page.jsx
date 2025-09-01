@@ -39,6 +39,7 @@ function Info() {
   }
 
   const res = tryGet().then((data) => {return data});
+  const testRes = tryGet();
 
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
@@ -49,7 +50,7 @@ function Info() {
       />
       <CommonInfo data={res}/>
       <ProjectList data={res}/>
-      <SkillInfo data={res}/>
+      <SkillInfo data={res} test={testRes}/>
       <SnsList data={res}/>
       <BackButton>close</BackButton>
     </div>

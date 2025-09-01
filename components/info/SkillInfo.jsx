@@ -2,24 +2,23 @@
 import React, {useState, useEffect} from "react";
 
 
-function SkillInfo({ data }) {
+function SkillInfo({ data, test }) {
   const [state, setState] = useState(null)
-  const skills = data.then((e) => setState(e))
+  data.then((e) => setState(e))
   useEffect(() => {
   console.log("???", state);
-    
   }, [setState])
 
   return (
     <div>
-      {skills?.map((item) => {
+      {/* {skills?.map((item) => {
         return (
           <img
             src={`https://img.shields.io/badge/-${item}-red?logo=${item}`}
             alt={`${item} 로고`}
           />
         );
-      })}
+      })} */}asd
     </div>
   );
 }
