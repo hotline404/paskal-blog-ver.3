@@ -15,7 +15,7 @@ function SnsList({ data }) {
     }
   }
   return (
-    <div>
+    <ol>
       {state?.sns.map((item) => {
         return (
           <li id={Math.random()}>
@@ -25,7 +25,7 @@ function SnsList({ data }) {
           </li>
         );
       })}
-    </div>
+    </ol>
   );
 }
 
