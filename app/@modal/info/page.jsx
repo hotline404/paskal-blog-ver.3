@@ -29,7 +29,7 @@ function Info() {
     }
   }
 
-  const res = tryGet().then((data) => {return data});
+  const res = tryGet().then((data) => console.log("data", data));
   
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
@@ -43,7 +43,6 @@ function Info() {
       <SkillInfo data={res}/>
       <SnsList data={res}/>
       <BackButton>close</BackButton>
-      <div>{res}</div>
     </div>
   );
 }

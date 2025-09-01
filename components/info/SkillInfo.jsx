@@ -11,3 +11,5 @@ function SkillInfo(props) {
 }
 
 export default SkillInfo
+
+//https://img.shields.io/badge/-javascript-red?logo=react
