@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 
 
 function SkillInfo({ data }) {
-  const [state, setState] = useState({})
+  const [state, setState] = useState(null)
   const skills = data.then((e) => setState(e))
   useEffect(() => {
   console.log("???", state);
