@@ -2,10 +2,10 @@
 import React from 'react'
 
 function SkillInfo(props) {
-  props.data.then(data => console.log('SkillInfo', data));
+  const skills = props.data.then(data => {return data.skills});
   return props.data.value ? (
     <div>
-      {props.data.value.skills?.map((item) => {
+      {skills?.map((item) => {
         <img src={`https://img.shields.io/badge/-${item}-red?logo=${item}`} alt={`${item} 로고`} />
       })}
     </div>
