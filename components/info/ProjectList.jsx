@@ -9,7 +9,7 @@ function ProjectList({ data }) {
   return (
     <div>
       {state?.projects.map((item, index) => {
-        return <a href={`https://github.com/${item}`} target='_blank'>{`project ${index} : ${item}`}</a>
+        return <a href={`https://github.com/${item}`} target='_blank'>{`project ${index + 1} : ${item}`}</a>
       })}
     </div>
   )
