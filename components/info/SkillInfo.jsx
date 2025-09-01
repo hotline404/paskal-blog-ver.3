@@ -3,11 +3,13 @@ import React from 'react'
 
 function SkillInfo(props) {
   console.log('SkillInfo', props.data.value);
-  return (
+  return props.data.value ? (
     <div>
-      this is skill info
+      {props.data.value.skills?.map((item) => {
+        <img src={`https://img.shields.io/badge/-${item}-red?logo=${item}`} alt={`${item} 로고`} />
+      })}
     </div>
-  )
+  ) : <></>
 }
 
 export default SkillInfo
