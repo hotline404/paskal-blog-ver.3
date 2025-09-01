@@ -25,7 +25,14 @@ function Info() {
       const res = await getInfo();
       console.log('res', res.filter((e) => e.key === "common"))
 
-      return res
+      const trimedRes = {
+        common : res.filter((e) => {e.key === "common"}),
+        projects : res.filter((e) => {e.key === "projects"}),
+        skills: res.filter((e) => {e.key === "skills"}),
+        sns: res.filter((e) => {e.key === "sns"})
+      }
+
+      return trimedRes;
     } catch (err) {
       console.error("error", err)
     }
