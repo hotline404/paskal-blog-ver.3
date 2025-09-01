@@ -3,7 +3,6 @@ import React from "react";
 
 function SkillInfo(props) {
   const skills = props.data.then((data) => {
-    console.log("data", data.skills);
     return data.skills;
   });
   console.log("fadsf", skills)
