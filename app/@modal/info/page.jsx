@@ -26,10 +26,10 @@ function Info() {
       console.log('res', res.filter((e) => e.key === "common"))
 
       const trimedRes = {
-        common : res.filter((e) => e.key === "common"),
-        projects : res.filter((e) => e.key === "projects"),
-        skills: res.filter((e) => e.key === "skills"),
-        sns: res.filter((e) => e.key === "sns")
+        common : res.filter((e) => e.key === "common").value,
+        projects : res.filter((e) => e.key === "projects").value,
+        skills: res.filter((e) => e.key === "skills").value,
+        sns: res.filter((e) => e.key === "sns").value
       }
 
       return trimedRes;
