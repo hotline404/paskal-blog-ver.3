@@ -3,7 +3,7 @@ import React from "react";
 
 function SkillInfo({data}) {
   
-  console.log("???", data.then((e) => {return e}));
+  console.log("???", data);
   return (
     <div>
       adsfasdf
