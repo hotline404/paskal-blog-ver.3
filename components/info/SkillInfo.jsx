@@ -6,18 +6,16 @@ function SkillInfo(props) {
     console.log('data', data.skills);
     return data.skills;
   });
-  return skills ? (
+  return (
     <div>
-      {skills?.map((item) => {
+      {skills.map((item) => {
         <img
           src={`https://img.shields.io/badge/-${item}-red?logo=${item}`}
           alt={`${item} 로고`}
         />;
       })}
     </div>
-  ) : (
-    <></>
-  );
+  )
 }
 
 export default SkillInfo;
