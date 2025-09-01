@@ -9,7 +9,7 @@ function SkillInfo(props) {
   return (
     <div>
       {skills.map((item) => {
-        <img
+        return <img
           src={`https://img.shields.io/badge/-${item}-red?logo=${item}`}
           alt={`${item} 로고`}
         />;
