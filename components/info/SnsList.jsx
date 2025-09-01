@@ -1,14 +1,18 @@
-'use client'
-import React from 'react'
+"use client";
+import React, { useState, useEffect } from "react";
 
-function SnsList(props) {
-  //console.log('SnsList', props.data.then((data) => {return data}));
-
+function SnsList({ data }) {
+  const [state, setState] = useState(null);
+  useEffect(() => {
+    data.then((e) => setState(e));
+  }, [state]);
   return (
     <div>
-      this is sns
+      {state?.sns.map((item) => {
+        return <li id={Math.random()}>{item}</li>;
+      })}
     </div>
-  )
+  );
 }
 
-export default SnsList
+export default SnsList;
