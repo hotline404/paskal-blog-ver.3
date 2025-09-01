@@ -9,7 +9,9 @@ function SnsList({ data }) {
   return (
     <div>
       {state?.sns.map((item) => {
-        return <li id={Math.random()}>{item}</li>;
+        return <li id={Math.random()}>
+          <a href={item}>{item}</a>
+        </li>;
       })}
     </div>
   );
