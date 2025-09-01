@@ -23,7 +23,6 @@ function Info() {
   async function tryGet () {
     try {
       const res = await getInfo();
-      console.log('res', res.filter((e) => e.key === "common"))
 
       const trimedRes = {
         common : res.filter((e) => e.key === "common")[0].value,
