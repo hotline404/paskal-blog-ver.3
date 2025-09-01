@@ -2,6 +2,7 @@
 import React from "react";
 
 function SkillInfo(props) {
+  const res = props.data
   console.log("???", props.data);
   return (
     <div>
@@ -12,7 +13,9 @@ function SkillInfo(props) {
             alt={`${item} 로고`}
           />
         );
-      })} */}ss
+      })} */}{
+        res
+      }
     </div>
   );
 }
