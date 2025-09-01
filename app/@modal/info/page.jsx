@@ -38,7 +38,8 @@ async function Info() {
   // }
 
   const res = await getInfo()
-  console.log('res', res)
+  console.log('res', res);
+  
   return (
     <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
       <img

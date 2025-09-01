@@ -3,7 +3,7 @@ import React from "react";
 
 function SkillInfo({data}) {
   
-  console.log("???", data);
+  console.log("???", data.then((e) => {return e}));
   return (
     <div>
       {/* {skills?.map((item) => {
