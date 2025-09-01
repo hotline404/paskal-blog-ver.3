@@ -3,7 +3,7 @@ import React from "react";
 
 function SkillInfo(props) {
   const skills = props.data.then((data) => {
-    console.log('data', data);
+    console.log('data', data.skills);
     return data.skills;
   });
   return props.data.value ? (
