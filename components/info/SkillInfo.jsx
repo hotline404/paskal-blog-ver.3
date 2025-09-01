@@ -2,9 +2,7 @@
 import React from "react";
 
 function SkillInfo(props) {
-  const skills = props.data.then((data) => {
-      console.log("data", data);
-  });
+  const skills = props.data
   console.log("???", skills);
   return (
     <div>
