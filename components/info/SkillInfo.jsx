@@ -8,11 +8,11 @@ function SkillInfo({ data }) {
   }, [state]);
 
   return (
-    <div>
+    <div className="mb-3 mr-3">
       {state?.skills.map((item) => {
         return (
           <img
-            src={`https://img.shields.io/badge/-${item}-red?logo=${item}`}
+            src={`https://img.shields.io/badge/-${item}-logo=${item}`}
             alt={`${item} 로고`}
           />
         );
