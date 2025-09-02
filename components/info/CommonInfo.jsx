@@ -9,7 +9,7 @@ function CommonInfo({ data }) {
   }, [state]);
 
   return (
-    <ol className="flex justify-center items-center">
+    <ol className="flex-col justify-center items-center">
         <li id={Math.random()}>Name : {state?.common[0]}</li>
         <li id={Math.random()}>E-mail : {state?.common[1]}</li>
         <li id={Math.random()}>github : {state?.common[2]}</li>
