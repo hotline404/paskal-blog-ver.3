@@ -44,7 +44,7 @@ function Info() {
   const res = tryGet();
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex-col items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/70 flex-col items-center justify-center z-50">
       <div className="flex justify-center mt-16 text-yellow-400">
         <img
           className="h-50 w-50 object-contain rounded-full"
