@@ -7,13 +7,12 @@ function ProjectList({ data }) {
     data.then((e) => setState(e))
   }, [state]) 
   return (
-    <span className='flex-col'>
+    <ol className='flex-col'>
       {state?.projects.map((item, index) => {
-        return <a href={`https://github.com/${item}`} target='_blank'>{`project ${index + 1} : ${item}`}</a>
+        return <li id={Math.random()}><a href={`https://github.com/${item}`} target='_blank'>{`project ${index + 1} : ${item}`}</a></li>
       })}
-    </span>
+    </ol>
   )
 }
 
 export default ProjectList
-//https://github.com/
