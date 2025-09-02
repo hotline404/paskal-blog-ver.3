@@ -51,7 +51,7 @@ function Info() {
           src="/my-notion-face-portrait.png"
           alt="me-image"
         />
-        <CommonInfo data={res} />
+        <CommonInfo data={res} className="flex-col justify-items-center "/>
         <SkillInfo data={res} />
       </div>
       <ProjectList data={res} />
