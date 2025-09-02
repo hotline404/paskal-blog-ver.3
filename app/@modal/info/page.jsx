@@ -56,7 +56,7 @@ function Info() {
       </div>
       <ProjectList data={res} />
       <SnsList data={res} />
-      <BackButton>close</BackButton>
+      <BackButton className="text-yellow-300">close</BackButton>
     </div>
   );
 }
