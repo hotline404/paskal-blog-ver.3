@@ -8,7 +8,7 @@ function SkillInfo({ data }) {
   }, [state]);
 
   return (
-    <div className="max-h-24">
+    <div className="flex-col max-h-24">
       {state?.skills.map((item) => {
         return (
           <img
