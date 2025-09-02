@@ -14,7 +14,7 @@ function SkillInfo({ data }) {
           <img
             src={`https://img.shields.io/badge/-${item}-transparent?logo=${item}&logoColor=white`}
             alt={`${item} 로고`}
-            className="mb-3 mr-3 w-26 h-8"
+            className="mb-3 ml-3 w-26 h-8"
           />
         );
       })}
