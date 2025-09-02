@@ -28,7 +28,7 @@ function Post({ params }) {
         <div className="h-[90%]">
           <Article data={result} />
           <BackButton className="italic mt-4 text-lg [&>button]:text-gray-500 hover:cursor-pointer">
-            ❌
+            C L O S E
           </BackButton>
         </div>
       </div>
