@@ -12,7 +12,7 @@ function SkillInfo({ data }) {
       {state?.skills.map((item) => {
         return (
           <img
-            src={`https://img.shields.io/badge/-${item}-logo=${item}`}
+            src={`https://img.shields.io/badge/-${item}-transparent?logo=${item}&logoColor=white`}
             alt={`${item} 로고`}
           />
         );
