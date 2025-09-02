@@ -29,7 +29,7 @@ function Post({ params }) {
           <Article data={result} />
           <BackButton className="italic mt-4 text-lg [&>button]:text-gray-500 hover:cursor-pointer">
             C L O S E
-          </BackButton>s
+          </BackButton>
         </div>
       </div>
     </div>
