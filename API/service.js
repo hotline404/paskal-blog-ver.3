@@ -63,24 +63,3 @@ exports.getSearchQuery = async function (query) {
 
   return post;
 };
-
-exports.getInfo = async function () {
-  const { results } = await notion.databases.query({
-    database_id: notion_DB,
-    filter: {
-      property: "category",
-      select: {
-        equals: "info",
-      },
-    },
-  });
-
-  const infomations = results.map((info) => {
-    return {
-      key : info.properties.Name.title[0].text.content,
-      value : info.properties.info_data.multi_select.map((e) => {return e.name})
-    }
-  })
-
-  return infomations;
-};
