@@ -45,7 +45,7 @@ function Info() {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex-col items-center justify-center z-50">
-      <div className="flex justify-center mt-16">
+      <div className="flex justify-center mt-16 text-yellow-400">
         <img
           className="h-40 w-50 object-contain"
           src="/my-notion-face-portrait.png"
