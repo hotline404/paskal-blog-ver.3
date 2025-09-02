@@ -11,9 +11,9 @@ function CommonInfo({ data }) {
 
   return (
     <ol>
-        <li id={Math.random()}>Name : {state.common[0]}</li>
-        <li id={Math.random()}>E-mail : {state.common[1]}</li>
-        <li id={Math.random()}>github : {state.common[2]}</li>
+        <li id={Math.random()}>Name : {state?.common[0]}</li>
+        <li id={Math.random()}>E-mail : {state?.common[1]}</li>
+        <li id={Math.random()}>github : {state?.common[2]}</li>
     </ol>
   );
 }
