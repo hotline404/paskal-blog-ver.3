@@ -15,7 +15,7 @@ function SnsList({ data }) {
     }
   }
   return (
-    <ol>
+    <ol className="text-white text-shadow-pink-500">
       {state?.sns.map((item) => {
         return (
           <li id={Math.random()}>
