@@ -6,7 +6,6 @@ function CommonInfo({ data }) {
 
   useEffect(() => {
     data.then((e) => setState(e));
-    console.log("state common", state);
   }, [state]);
 
   return (
