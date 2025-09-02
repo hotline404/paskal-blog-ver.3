@@ -28,7 +28,7 @@ function Post({ params }) {
         <h2 className="italic">/* P O S T P A G E */</h2>
         <div className="h-[90%]">
           <Article data={result}/>
-          <BackButton className="italic mt-4 text-lg text-gray-500 hover:cursor-pointer">
+          <BackButton className="italic mt-4 text-lg [&>button]:text-gray-500 hover:cursor-pointer">
             C L O S E
           </BackButton>
         </div>
